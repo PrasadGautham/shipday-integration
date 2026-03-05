@@ -59,12 +59,24 @@ class EventTracker {
   }
 
   add(rawBody) {
+    const extractedOrderId =
+      rawBody?.orderId ||
+      rawBody?.order_id ||
+      rawBody?.id ||
+      rawBody?.order?.id ||
+      null;
+    const extractedOrderNumber =
+      rawBody?.orderNumber ||
+      rawBody?.order_number ||
+      rawBody?.order?.order_number ||
+      null;
     const status = this.normalizeStatus(rawBody?.status || rawBody?.order_status || rawBody?.event);
 
     const event = {
       receivedAt: new Date().toISOString(),
       status,
-      orderId: rawBody?.orderId || rawBody?.order_id || rawBody?.id || null,
+      orderId: extractedOrderId,
+      orderNumber: extractedOrderNumber,
       source: 'shipday',
       payload: rawBody
     };
@@ -77,12 +89,15 @@ class EventTracker {
   }
 
   appendPerOrderLog(event) {
-    const orderId = event.orderId ? String(event.orderId) : 'unknown-order';
-    const safeOrderId = orderId.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const orderFilePath = path.join(this.orderEventsDir, `${safeOrderId}.json`);
+    const orderId = event.orderId ? String(event.orderId) : null;
+    const orderNumber = event.orderNumber ? String(event.orderNumber) : null;
+    const rawFileKey = orderNumber && orderId ? `${orderNumber}_${orderId}` : orderId || 'unknown-order';
+    const safeFileKey = rawFileKey.replace(/[^a-zA-Z0-9._-]/g, '_');
+    const orderFilePath = path.join(this.orderEventsDir, `${safeFileKey}.json`);
 
     let record = {
-      orderId,
+      orderId: orderId || 'unknown-order',
+      orderNumber,
       eventCount: 0,
       events: []
     };
@@ -98,7 +113,8 @@ class EventTracker {
       }
     }
 
-    record.orderId = orderId;
+    record.orderId = orderId || 'unknown-order';
+    record.orderNumber = orderNumber;
     record.events.push(event);
     record.eventCount = record.events.length;
     record.lastReceivedAt = event.receivedAt;

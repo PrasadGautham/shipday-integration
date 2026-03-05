@@ -1,0 +1,86 @@
+{
+  "orderId": "unknown-order",
+  "eventCount": 1,
+  "events": [
+    {
+      "receivedAt": "2026-03-05T19:21:46.843Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": null,
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772738505954,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44236366,
+          "order_number": "90944453",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1090,
+          "eta": "",
+          "driving_distance": 15144,
+          "placement_time": 1772738506000,
+          "expected_pickup_time": 1772739540000,
+          "expected_delivery_time": 1772741940000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 3,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61033326,
+          "name": "nourah",
+          "phone": "+96590944453",
+          "address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
+          "formatted_address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
+          "location": {
+            "lat": 29.3152874,
+            "lng": 48.0632366
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBubHlseXk=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-05T19:21:46.843Z",
+  "lastStatus": "NOT_ASSIGNED"
+}
