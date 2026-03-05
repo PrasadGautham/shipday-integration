@@ -1,0 +1,14 @@
+{
+  "name": "shipday-klc-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shipday webhook endpoint with token auth and event tracker",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
