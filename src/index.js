@@ -58,7 +58,10 @@ function parseJsonBody(req) {
 }
 
 function isTokenValid(reqUrl, reqHeaders) {
-  const tokenFromHeader = reqHeaders['x-webhook-token'] || reqHeaders.authorization?.replace(/^Bearer\s+/i, '');
+  const tokenFromHeader =
+    reqHeaders.token ||
+    reqHeaders['x-webhook-token'] ||
+    reqHeaders.authorization?.replace(/^Bearer\s+/i, '');
   const tokenFromQuery = reqUrl.searchParams.get('token');
   const token = tokenFromHeader || tokenFromQuery;
 
