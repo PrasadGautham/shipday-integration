@@ -1,0 +1,122 @@
+{
+  "orderId": "44322294",
+  "orderNumber": "50",
+  "eventCount": 2,
+  "events": [
+    {
+      "receivedAt": "2026-03-07T13:50:05.836Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44322294,
+      "orderNumber": "50",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772891404507,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44322294,
+          "order_number": "50",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 816,
+          "eta": "",
+          "driving_distance": 9307,
+          "placement_time": 1772891404000,
+          "expected_pickup_time": 1772892420000,
+          "expected_delivery_time": 1772894820000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61118662,
+          "name": "khalid",
+          "phone": "+96597555515",
+          "address": "Kaifan, Kuwait",
+          "formatted_address": "Kaifan, Kuwait",
+          "location": {
+            "lat": 29.3375672,
+            "lng": 47.9589345
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbm5uZ3A=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T13:51:35.481Z",
+      "status": "DELETED",
+      "orderId": 44322294,
+      "orderNumber": null,
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772891494235,
+        "event": "ORDER_DELETE",
+        "order_status": "DELETED",
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "order_id": 44322294,
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-07T13:51:35.481Z",
+  "lastStatus": "DELETED"
+}

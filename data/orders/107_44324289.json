@@ -1,0 +1,548 @@
+{
+  "orderId": "44324289",
+  "orderNumber": "107",
+  "eventCount": 6,
+  "events": [
+    {
+      "receivedAt": "2026-03-07T15:16:23.481Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44324289,
+      "orderNumber": "107",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772896582686,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44324289,
+          "order_number": "107",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 759,
+          "eta": "",
+          "driving_distance": 7799,
+          "placement_time": 1772896583000,
+          "expected_pickup_time": 1772897700000,
+          "expected_delivery_time": 1772900100000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61120642,
+          "name": "soka",
+          "phone": "+96597733288",
+          "address": "Daiya, Kuwait",
+          "formatted_address": "Daiya, Kuwait",
+          "location": {
+            "lat": 29.3604396,
+            "lng": 48.0183705
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBudmc=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:16:29.044Z",
+      "status": "NOT_ACCEPTED",
+      "orderId": 44324289,
+      "orderNumber": "107",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772896588503,
+        "event": "ORDER_ASSIGNED",
+        "order_status": "NOT_ACCEPTED",
+        "order": {
+          "id": 44324289,
+          "order_number": "107",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 759,
+          "eta": "",
+          "driving_distance": 7799,
+          "placement_time": 1772896583000,
+          "expected_pickup_time": 1772897700000,
+          "expected_delivery_time": 1772900100000,
+          "assigned_time": 1772896588000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61120642,
+          "name": "soka",
+          "phone": "+96597733288",
+          "address": "Daiya, Kuwait",
+          "formatted_address": "Daiya, Kuwait",
+          "location": {
+            "lat": 29.3604396,
+            "lng": 48.0183705
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBudmc=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:16:44.865Z",
+      "status": "STARTED",
+      "orderId": 44324289,
+      "orderNumber": "107",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772896604324,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44324289,
+          "order_number": "107",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 759,
+          "eta": "",
+          "driving_distance": 7799,
+          "placement_time": 1772896583000,
+          "expected_pickup_time": 1772897700000,
+          "expected_delivery_time": 1772900100000,
+          "assigned_time": 1772896588000,
+          "start_time": 1772896604000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61120642,
+          "name": "soka",
+          "phone": "+96597733288",
+          "address": "Daiya, Kuwait",
+          "formatted_address": "Daiya, Kuwait",
+          "location": {
+            "lat": 29.3604396,
+            "lng": 48.0183705
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBudmc=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:16:52.556Z",
+      "status": "PICKED_UP",
+      "orderId": 44324289,
+      "orderNumber": "107",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772896612044,
+        "event": "ORDER_PIKEDUP",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44324289,
+          "order_number": "107",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 759,
+          "eta": "",
+          "driving_distance": 7799,
+          "placement_time": 1772896583000,
+          "expected_pickup_time": 1772897700000,
+          "expected_delivery_time": 1772900100000,
+          "assigned_time": 1772896588000,
+          "start_time": 1772896604000,
+          "pickedup_time": 1772896612000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61120642,
+          "name": "soka",
+          "phone": "+96597733288",
+          "address": "Daiya, Kuwait",
+          "formatted_address": "Daiya, Kuwait",
+          "location": {
+            "lat": 29.3604396,
+            "lng": 48.0183705
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBudmc=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:16:57.040Z",
+      "status": "READY_TO_DELIVER",
+      "orderId": 44324289,
+      "orderNumber": "107",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772896613281,
+        "event": "ORDER_ONTHEWAY",
+        "order_status": "READY_TO_DELIVER",
+        "order": {
+          "id": 44324289,
+          "order_number": "107",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 759,
+          "eta": "",
+          "driving_distance": 7799,
+          "placement_time": 1772896583000,
+          "expected_pickup_time": 1772897700000,
+          "expected_delivery_time": 1772900100000,
+          "assigned_time": 1772896588000,
+          "start_time": 1772896604000,
+          "pickedup_time": 1772896612000,
+          "arrived_time": 1772896613000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61120642,
+          "name": "soka",
+          "phone": "+96597733288",
+          "address": "Daiya, Kuwait",
+          "formatted_address": "Daiya, Kuwait",
+          "location": {
+            "lat": 29.3604396,
+            "lng": 48.0183705
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBudmc=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:17:04.772Z",
+      "status": "ALREADY_DELIVERED",
+      "orderId": 44324289,
+      "orderNumber": "107",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772896624009,
+        "event": "ORDER_COMPLETED",
+        "order_status": "ALREADY_DELIVERED",
+        "order": {
+          "id": 44324289,
+          "order_number": "107",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 759,
+          "eta": "",
+          "driving_distance": 7799,
+          "placement_time": 1772896583000,
+          "expected_pickup_time": 1772897700000,
+          "expected_delivery_time": 1772900100000,
+          "assigned_time": 1772896588000,
+          "start_time": 1772896604000,
+          "pickedup_time": 1772896612000,
+          "arrived_time": 1772896613000,
+          "delivery_time": 1772896614000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61120642,
+          "name": "soka",
+          "phone": "+96597733288",
+          "address": "Daiya, Kuwait",
+          "formatted_address": "Daiya, Kuwait",
+          "location": {
+            "lat": 29.3604396,
+            "lng": 48.0183705
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBudmc=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-07T15:17:04.772Z",
+  "lastStatus": "ALREADY_DELIVERED"
+}

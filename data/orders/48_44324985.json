@@ -1,0 +1,548 @@
+{
+  "orderId": "44324985",
+  "orderNumber": "48",
+  "eventCount": 6,
+  "events": [
+    {
+      "receivedAt": "2026-03-07T15:42:08.883Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44324985,
+      "orderNumber": "48",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772898128026,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44324985,
+          "order_number": "48",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 800,
+          "eta": "",
+          "driving_distance": 12674,
+          "placement_time": 1772898128000,
+          "expected_pickup_time": 1772899260000,
+          "expected_delivery_time": 1772901660000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61121321,
+          "name": "MALAK",
+          "phone": "+96599220033",
+          "address": "Block 3, Mishref, Kuwait",
+          "formatted_address": "Block 3, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2782379,
+            "lng": 48.07415150000001
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBndmY=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:42:17.250Z",
+      "status": "NOT_ACCEPTED",
+      "orderId": 44324985,
+      "orderNumber": "48",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772898136489,
+        "event": "ORDER_ASSIGNED",
+        "order_status": "NOT_ACCEPTED",
+        "order": {
+          "id": 44324985,
+          "order_number": "48",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 800,
+          "eta": "",
+          "driving_distance": 12674,
+          "placement_time": 1772898128000,
+          "expected_pickup_time": 1772899260000,
+          "expected_delivery_time": 1772901660000,
+          "assigned_time": 1772898136000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61121321,
+          "name": "MALAK",
+          "phone": "+96599220033",
+          "address": "Block 3, Mishref, Kuwait",
+          "formatted_address": "Block 3, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2782379,
+            "lng": 48.07415150000001
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBndmY=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:42:24.567Z",
+      "status": "STARTED",
+      "orderId": 44324985,
+      "orderNumber": "48",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772898143816,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44324985,
+          "order_number": "48",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 800,
+          "eta": "",
+          "driving_distance": 12674,
+          "placement_time": 1772898128000,
+          "expected_pickup_time": 1772899260000,
+          "expected_delivery_time": 1772901660000,
+          "assigned_time": 1772898136000,
+          "start_time": 1772898144000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61121321,
+          "name": "MALAK",
+          "phone": "+96599220033",
+          "address": "Block 3, Mishref, Kuwait",
+          "formatted_address": "Block 3, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2782379,
+            "lng": 48.07415150000001
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBndmY=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:43:37.378Z",
+      "status": "PICKED_UP",
+      "orderId": 44324985,
+      "orderNumber": "48",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772898216589,
+        "event": "ORDER_PIKEDUP",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44324985,
+          "order_number": "48",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 800,
+          "eta": "",
+          "driving_distance": 12674,
+          "placement_time": 1772898128000,
+          "expected_pickup_time": 1772899260000,
+          "expected_delivery_time": 1772901660000,
+          "assigned_time": 1772898136000,
+          "start_time": 1772898144000,
+          "pickedup_time": 1772898217000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61121321,
+          "name": "MALAK",
+          "phone": "+96599220033",
+          "address": "Block 3, Mishref, Kuwait",
+          "formatted_address": "Block 3, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2782379,
+            "lng": 48.07415150000001
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBndmY=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:43:38.471Z",
+      "status": "READY_TO_DELIVER",
+      "orderId": 44324985,
+      "orderNumber": "48",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772898217783,
+        "event": "ORDER_ONTHEWAY",
+        "order_status": "READY_TO_DELIVER",
+        "order": {
+          "id": 44324985,
+          "order_number": "48",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 800,
+          "eta": "",
+          "driving_distance": 12674,
+          "placement_time": 1772898128000,
+          "expected_pickup_time": 1772899260000,
+          "expected_delivery_time": 1772901660000,
+          "assigned_time": 1772898136000,
+          "start_time": 1772898144000,
+          "pickedup_time": 1772898217000,
+          "arrived_time": 1772898218000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61121321,
+          "name": "MALAK",
+          "phone": "+96599220033",
+          "address": "Block 3, Mishref, Kuwait",
+          "formatted_address": "Block 3, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2782379,
+            "lng": 48.07415150000001
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBndmY=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T15:43:42.660Z",
+      "status": "ALREADY_DELIVERED",
+      "orderId": 44324985,
+      "orderNumber": "48",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772898221964,
+        "event": "ORDER_COMPLETED",
+        "order_status": "ALREADY_DELIVERED",
+        "order": {
+          "id": 44324985,
+          "order_number": "48",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 800,
+          "eta": "",
+          "driving_distance": 12674,
+          "placement_time": 1772898128000,
+          "expected_pickup_time": 1772899260000,
+          "expected_delivery_time": 1772901660000,
+          "assigned_time": 1772898136000,
+          "start_time": 1772898144000,
+          "pickedup_time": 1772898217000,
+          "arrived_time": 1772898218000,
+          "delivery_time": 1772898220000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61121321,
+          "name": "MALAK",
+          "phone": "+96599220033",
+          "address": "Block 3, Mishref, Kuwait",
+          "formatted_address": "Block 3, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2782379,
+            "lng": 48.07415150000001
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 489234,
+          "name": "noufal driver",
+          "phone": "+96566762099",
+          "email": "noufalnakkarath@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "plate_number": "",
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBsbnBndmY=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-07T15:43:42.660Z",
+  "lastStatus": "ALREADY_DELIVERED"
+}
