@@ -1,11 +1,12 @@
 {
   "orderId": "44236366",
+  "orderNumber": "90944453",
   "eventCount": 5,
   "events": [
     {
       "receivedAt": "2026-03-05T19:21:46.843Z",
       "status": "NOT_ASSIGNED",
-      "orderId": null,
+      "orderId": 44236366,
       "source": "shipday",
       "payload": {
         "timestamp": 1772738505954,
@@ -78,7 +79,8 @@
         "pods": [],
         "signatures": [],
         "delivery_note": ""
-      }
+      },
+      "orderNumber": "90944453"
     },
     {
       "receivedAt": "2026-03-05T19:34:43.037Z",
@@ -448,6 +450,5 @@
     }
   ],
   "lastReceivedAt": "2026-03-05T20:44:30.309Z",
-  "lastStatus": "ALREADY_DELIVERED",
-  "orderNumber": "90944453"
+  "lastStatus": "ALREADY_DELIVERED"
 }

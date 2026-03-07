@@ -6,11 +6,15 @@ const { EventTracker } = require('./eventTracker');
 const { buildDashboardData, withDateRange, buildTrendSeries, buildStoreDetails } = require('./dashboardData');
 
 const config = getConfig();
+const processLock = acquireProcessLock(config.processLockFile);
 const tracker = new EventTracker({
   storePath: config.eventStoreFile,
   recentLimit: config.recentLimit,
-  orderEventsDir: config.orderEventsDir
+  orderEventsDir: config.orderEventsDir,
+  rebuildOrdersOnStart: config.rebuildOrdersOnStart
 });
+
+let dashboardCache = null;
 
 const knownShipdayStatuses = [
   'STARTED',
@@ -21,6 +25,80 @@ const knownShipdayStatuses = [
   'INCOMPLETE',
   'ALREADY_DELIVERED'
 ];
+
+function releaseProcessLock() {
+  if (processLock?.active && processLock?.filePath && fs.existsSync(processLock.filePath)) {
+    fs.unlinkSync(processLock.filePath);
+  }
+  if (processLock) {
+    processLock.active = false;
+  }
+}
+
+process.on('exit', releaseProcessLock);
+process.on('SIGINT', () => {
+  releaseProcessLock();
+  process.exit(0);
+});
+process.on('SIGTERM', () => {
+  releaseProcessLock();
+  process.exit(0);
+});
+
+function isProcessAlive(pid) {
+  if (!Number.isFinite(pid) || pid <= 0) {
+    return false;
+  }
+
+  try {
+    process.kill(pid, 0);
+    return true;
+  } catch (err) {
+    return err && err.code === 'EPERM';
+  }
+}
+
+function acquireProcessLock(lockFilePath) {
+  const dir = path.dirname(lockFilePath);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
+  const payload = JSON.stringify({
+    pid: process.pid,
+    startedAt: new Date().toISOString()
+  });
+
+  try {
+    const fd = fs.openSync(lockFilePath, 'wx');
+    fs.writeFileSync(fd, payload, 'utf8');
+    fs.closeSync(fd);
+    return { filePath: lockFilePath, active: true };
+  } catch (err) {
+    if (err.code !== 'EEXIST') {
+      throw err;
+    }
+  }
+
+  let existingPid = null;
+  try {
+    const raw = fs.readFileSync(lockFilePath, 'utf8');
+    const parsed = JSON.parse(raw);
+    existingPid = Number(parsed?.pid);
+  } catch {
+    // Treat malformed lock file as stale.
+  }
+
+  if (isProcessAlive(existingPid)) {
+    throw new Error(`Another server process is already running (pid ${existingPid})`);
+  }
+
+  fs.unlinkSync(lockFilePath);
+  const fd = fs.openSync(lockFilePath, 'wx');
+  fs.writeFileSync(fd, payload, 'utf8');
+  fs.closeSync(fd);
+  return { filePath: lockFilePath, active: true };
+}
 
 function sendJson(res, statusCode, body) {
   const payload = JSON.stringify(body);
@@ -54,6 +132,110 @@ function normalizeRangeParam(rawValue, edge) {
     return edge === 'end' ? `${value}T23:59:59.999Z` : `${value}T00:00:00.000Z`;
   }
   return value;
+}
+
+function parseIsoDate(value) {
+  if (!value) {
+    return null;
+  }
+  const ms = Date.parse(value);
+  if (!Number.isFinite(ms)) {
+    return null;
+  }
+  return new Date(ms);
+}
+
+function normalizeAndClampDateRange(reqUrl) {
+  const normalizedFrom = normalizeRangeParam(reqUrl.searchParams.get('from'), 'start');
+  const normalizedTo = normalizeRangeParam(reqUrl.searchParams.get('to'), 'end');
+
+  const now = new Date();
+  const maxRangeMs = config.maxRangeDays * 24 * 60 * 60 * 1000;
+  const absoluteMin = new Date(now.getTime() - maxRangeMs);
+  let toDate = parseIsoDate(normalizedTo) || now;
+  let fromDate = parseIsoDate(normalizedFrom);
+  let wasClamped = false;
+
+  if (toDate > now) {
+    toDate = now;
+    wasClamped = true;
+  }
+
+  if (toDate < absoluteMin) {
+    toDate = now;
+    wasClamped = true;
+  }
+
+  const minAllowedFrom = new Date(toDate.getTime() - maxRangeMs);
+
+  if (!fromDate) {
+    fromDate = absoluteMin;
+    wasClamped = true;
+  }
+
+  if (fromDate > toDate) {
+    fromDate = minAllowedFrom;
+    wasClamped = true;
+  }
+
+  if (fromDate < absoluteMin) {
+    fromDate = absoluteMin;
+    wasClamped = true;
+  }
+
+  if (fromDate < minAllowedFrom) {
+    fromDate = minAllowedFrom;
+    wasClamped = true;
+  }
+
+  return {
+    from: fromDate.toISOString(),
+    to: toDate.toISOString(),
+    wasClamped,
+    maxRangeDays: config.maxRangeDays
+  };
+}
+
+function getDashboardBase() {
+  const now = Date.now();
+  const version = tracker.getVersion();
+
+  if (
+    dashboardCache &&
+    dashboardCache.version === version &&
+    now - dashboardCache.createdAt <= config.dashboardCacheTtlMs
+  ) {
+    return dashboardCache.data;
+  }
+
+  const data = buildDashboardData(config.orderEventsDir);
+  dashboardCache = {
+    version,
+    createdAt: now,
+    data
+  };
+
+  return data;
+}
+
+function invalidateDashboardCache() {
+  dashboardCache = null;
+}
+
+function buildIntegrityReport(baseData) {
+  const summary = tracker.getSummary();
+  const orderFiles = baseData.orders.length;
+  const orderEventsTotal = baseData.orders.reduce((sum, order) => sum + (order.eventCount || 0), 0);
+  const ndjsonTotalEvents = summary.totalEvents;
+
+  return {
+    ok: orderEventsTotal === ndjsonTotalEvents,
+    ndjsonTotalEvents,
+    orderFiles,
+    orderEventsTotal,
+    difference: ndjsonTotalEvents - orderEventsTotal,
+    generatedAt: new Date().toISOString()
+  };
 }
 
 function parseJsonBody(req) {
@@ -131,21 +313,21 @@ async function handleRequest(req, res) {
   }
 
   if (reqUrl.pathname === '/api/dashboard/summary' && req.method === 'GET') {
-    const base = buildDashboardData(config.orderEventsDir);
-    const from = normalizeRangeParam(reqUrl.searchParams.get('from'), 'start');
-    const to = normalizeRangeParam(reqUrl.searchParams.get('to'), 'end');
-    const data = withDateRange(base, { from, to });
+    const base = getDashboardBase();
+    const range = normalizeAndClampDateRange(reqUrl);
+    const data = withDateRange(base, { from: range.from, to: range.to });
+    data.range = range;
     sendJson(res, 200, data);
     return;
   }
 
   if (reqUrl.pathname === '/api/dashboard/stores' && req.method === 'GET') {
-    const base = buildDashboardData(config.orderEventsDir);
-    const from = normalizeRangeParam(reqUrl.searchParams.get('from'), 'start');
-    const to = normalizeRangeParam(reqUrl.searchParams.get('to'), 'end');
-    const data = withDateRange(base, { from, to });
+    const base = getDashboardBase();
+    const range = normalizeAndClampDateRange(reqUrl);
+    const data = withDateRange(base, { from: range.from, to: range.to });
     sendJson(res, 200, {
       generatedAt: data.generatedAt,
+      range,
       count: data.stores.length,
       stores: data.stores
     });
@@ -153,10 +335,9 @@ async function handleRequest(req, res) {
   }
 
   if (reqUrl.pathname === '/api/dashboard/orders' && req.method === 'GET') {
-    const base = buildDashboardData(config.orderEventsDir);
-    const from = normalizeRangeParam(reqUrl.searchParams.get('from'), 'start');
-    const to = normalizeRangeParam(reqUrl.searchParams.get('to'), 'end');
-    const data = withDateRange(base, { from, to });
+    const base = getDashboardBase();
+    const range = normalizeAndClampDateRange(reqUrl);
+    const data = withDateRange(base, { from: range.from, to: range.to });
     const storeId = reqUrl.searchParams.get('storeId');
     const status = reqUrl.searchParams.get('status');
     const search = reqUrl.searchParams.get('search');
@@ -182,6 +363,7 @@ async function handleRequest(req, res) {
 
     sendJson(res, 200, {
       generatedAt: data.generatedAt,
+      range,
       count: filtered.length,
       orders: filtered
     });
@@ -189,16 +371,16 @@ async function handleRequest(req, res) {
   }
 
   if (reqUrl.pathname === '/api/dashboard/trends' && req.method === 'GET') {
-    const base = buildDashboardData(config.orderEventsDir);
-    const from = normalizeRangeParam(reqUrl.searchParams.get('from'), 'start');
-    const to = normalizeRangeParam(reqUrl.searchParams.get('to'), 'end');
-    const data = withDateRange(base, { from, to });
+    const base = getDashboardBase();
+    const range = normalizeAndClampDateRange(reqUrl);
+    const data = withDateRange(base, { from: range.from, to: range.to });
     const storeId = reqUrl.searchParams.get('storeId') || '';
     const granularity = reqUrl.searchParams.get('granularity') || 'daily';
     const series = buildTrendSeries(data.orders, { storeId, granularity });
 
     sendJson(res, 200, {
       generatedAt: data.generatedAt,
+      range,
       granularity: granularity === 'hourly' ? 'hourly' : 'daily',
       storeId: storeId || null,
       points: series
@@ -213,10 +395,9 @@ async function handleRequest(req, res) {
       return;
     }
 
-    const base = buildDashboardData(config.orderEventsDir);
-    const from = normalizeRangeParam(reqUrl.searchParams.get('from'), 'start');
-    const to = normalizeRangeParam(reqUrl.searchParams.get('to'), 'end');
-    const data = withDateRange(base, { from, to });
+    const base = getDashboardBase();
+    const range = normalizeAndClampDateRange(reqUrl);
+    const data = withDateRange(base, { from: range.from, to: range.to });
     const details = buildStoreDetails(data.orders, { storeId });
     if (!details) {
       sendJson(res, 404, { error: 'Store not found in selected range' });
@@ -225,8 +406,15 @@ async function handleRequest(req, res) {
 
     sendJson(res, 200, {
       generatedAt: data.generatedAt,
+      range,
       ...details
     });
+    return;
+  }
+
+  if (reqUrl.pathname === '/api/dashboard/integrity' && req.method === 'GET') {
+    const base = getDashboardBase();
+    sendJson(res, 200, buildIntegrityReport(base));
     return;
   }
 
@@ -238,6 +426,7 @@ async function handleRequest(req, res) {
 
     const payload = await parseJsonBody(req);
     const event = tracker.add(payload);
+    invalidateDashboardCache();
 
     sendJson(res, 200, {
       accepted: true,

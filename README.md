@@ -1,7 +1,7 @@
 # Shipday Webhook Event Tracker (Node.js)
 
 This service exposes a secured webhook endpoint for Shipday order-status updates and tracks all incoming events.
-Each received event is also saved per order in `data/orders/<orderId>.json`.
+Each received event is also saved per order in `data/orders/<orderNumber>_<orderId>.json` (fallback: `<orderId>.json`).
 
 ## Endpoints
 
@@ -37,6 +37,10 @@ Each received event is also saved per order in `data/orders/<orderId>.json`.
   - Query params:
     - `storeId=<canonical-store-id>` required
     - `from=YYYY-MM-DD`, `to=YYYY-MM-DD` optional
+- `GET /api/dashboard/integrity`
+  - Returns consistency checks between NDJSON total events and aggregated per-order event counts.
+
+All dashboard APIs clamp date filtering to the latest `MAX_FILTER_RANGE_DAYS` (default 62 days).
 
 ## Quick Start
 
@@ -60,6 +64,10 @@ https://<your-domain>/webhooks/shipday/order-status-update?token=<SHIPDAY_WEBHOO
 - `TRACKER_RECENT_LIMIT` default `100`
 - `TRACKER_EVENT_STORE_FILE` default `data/shipday-events.ndjson`
 - `TRACKER_ORDER_EVENTS_DIR` default `data/orders`
+- `PROCESS_LOCK_FILE` default `data/server.lock` (single-process lock)
+- `DASHBOARD_CACHE_TTL_MS` default `5000` (dashboard dataset cache TTL)
+- `MAX_FILTER_RANGE_DAYS` default `62` (latest-range clamp for dashboard APIs)
+- `REBUILD_ORDERS_ON_START` default `true` (rebuild `data/orders` from NDJSON at startup)
 
 ## Sample test request
 
