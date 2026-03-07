@@ -4,6 +4,8 @@ let selectedStoreName = '';
 let selectedStatus = '';
 let searchText = '';
 let selectedGranularity = 'daily';
+let currentPage = 1;
+let pageSize = 15;
 
 function fmtDate(iso) {
   if (!iso) {
@@ -44,6 +46,43 @@ function getDateFilters() {
   };
 }
 
+function initStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const from = params.get('from') || '';
+  const to = params.get('to') || '';
+  const status = params.get('status') || '';
+  const search = params.get('search') || '';
+  const granularity = params.get('granularity') || 'daily';
+  const page = Number.parseInt(params.get('page') || '1', 10);
+  const size = Number.parseInt(params.get('pageSize') || '15', 10);
+
+  document.getElementById('fromDate').value = from;
+  document.getElementById('toDate').value = to;
+  document.getElementById('searchInput').value = search;
+  document.getElementById('granularityFilter').value = granularity === 'hourly' ? 'hourly' : 'daily';
+
+  searchText = search.toLowerCase();
+  selectedGranularity = granularity === 'hourly' ? 'hourly' : 'daily';
+  currentPage = Number.isFinite(page) && page > 0 ? page : 1;
+  pageSize = [10, 15, 25, 50].includes(size) ? size : 15;
+  selectedStatus = status;
+}
+
+function syncUrlState() {
+  const dates = getDateFilters();
+  const params = new URLSearchParams();
+  if (dates.from) params.set('from', dates.from);
+  if (dates.to) params.set('to', dates.to);
+  if (selectedStatus) params.set('status', selectedStatus);
+  if (searchText) params.set('search', searchText);
+  if (selectedGranularity) params.set('granularity', selectedGranularity);
+  params.set('page', String(currentPage));
+  params.set('pageSize', String(pageSize));
+  const query = params.toString();
+  const next = `${window.location.pathname}${query ? `?${query}` : ''}`;
+  window.history.replaceState({}, '', next);
+}
+
 function buildQuery(params) {
   const query = new URLSearchParams();
   Object.entries(params).forEach(([key, value]) => {
@@ -73,7 +112,7 @@ function renderStores() {
   wrap.innerHTML = dashboardData.stores
     .map(
       (store) => `
-      <button class="company-btn ${selectedStoreId === store.storeId ? 'active' : ''}" data-store-id="${store.storeId}" data-store="${store.storeName}" data-store-address="${store.storeAddress || ''}">
+      <button class="company-btn ${selectedStoreId === store.storeId ? 'active' : ''}" data-store-id="${store.storeId}">
         <strong>${store.storeName}</strong>
         <div class="company-meta">${store.storeAddress || '-'}</div>
         <div class="company-meta">
@@ -112,19 +151,80 @@ function getFilteredOrders() {
   });
 }
 
+function renderPagination(containerId, totalItems) {
+  const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+  if (currentPage > totalPages) {
+    currentPage = totalPages;
+  }
+
+  const start = totalItems === 0 ? 0 : (currentPage - 1) * pageSize + 1;
+  const end = Math.min(currentPage * pageSize, totalItems);
+  const container = document.getElementById(containerId);
+  container.innerHTML = `
+    <div class="pagination-meta">Showing ${start}-${end} of ${totalItems}</div>
+    <div class="pagination-controls">
+      <button id="prevPage" ${currentPage <= 1 ? 'disabled' : ''}>Prev</button>
+      <span class="pagination-meta">Page ${currentPage} / ${totalPages}</span>
+      <select id="pageSizeSelect">
+        <option value="10" ${pageSize === 10 ? 'selected' : ''}>10 / page</option>
+        <option value="15" ${pageSize === 15 ? 'selected' : ''}>15 / page</option>
+        <option value="25" ${pageSize === 25 ? 'selected' : ''}>25 / page</option>
+        <option value="50" ${pageSize === 50 ? 'selected' : ''}>50 / page</option>
+      </select>
+      <button id="nextPage" ${currentPage >= totalPages ? 'disabled' : ''}>Next</button>
+    </div>
+  `;
+
+  const prev = document.getElementById('prevPage');
+  const next = document.getElementById('nextPage');
+  if (prev) {
+    prev.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage -= 1;
+        renderOrders();
+      }
+    });
+  }
+  if (next) {
+    next.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage += 1;
+        renderOrders();
+      }
+    });
+  }
+  const sizeSelect = document.getElementById('pageSizeSelect');
+  if (sizeSelect) {
+    sizeSelect.addEventListener('change', (event) => {
+      const parsed = Number.parseInt(event.target.value, 10);
+      if ([10, 15, 25, 50].includes(parsed)) {
+        pageSize = parsed;
+        currentPage = 1;
+        renderOrders();
+      }
+    });
+  }
+}
+
 function renderOrders() {
   const orders = getFilteredOrders();
+  const totalPages = Math.max(1, Math.ceil(orders.length / pageSize));
+  if (currentPage > totalPages) {
+    currentPage = totalPages;
+  }
+  const startIdx = (currentPage - 1) * pageSize;
+  const pageOrders = orders.slice(startIdx, startIdx + pageSize);
   const body = document.getElementById('ordersBody');
-  body.innerHTML = orders
+  body.innerHTML = pageOrders
     .map(
       (order, idx) => `
       <tr data-index="${idx}">
-        <td>${order.orderNumber}</td>
-        <td>${order.store.name}</td>
-        <td><span class="badge ${statusClass(order.currentStatus)}">${order.currentStatus}</span></td>
-        <td>${fmtDate(order.timeline.placementAt)}</td>
-        <td>${fmtDate(order.timeline.deliveredAt)}</td>
-        <td>${fmtNumber(order.metrics.minutesPlacementToDelivered, 'm')}</td>
+        <td data-label="Order #">${order.orderNumber}</td>
+        <td data-label="Store">${order.store.name}</td>
+        <td data-label="Status"><span class="badge ${statusClass(order.currentStatus)}">${order.currentStatus}</span></td>
+        <td data-label="Placed">${fmtDate(order.timeline.placementAt)}</td>
+        <td data-label="Delivered">${fmtDate(order.timeline.deliveredAt)}</td>
+        <td data-label="Total Mins">${fmtNumber(order.metrics.minutesPlacementToDelivered, 'm')}</td>
       </tr>
     `
     )
@@ -132,10 +232,13 @@ function renderOrders() {
 
   body.querySelectorAll('tr').forEach((row) => {
     row.addEventListener('click', () => {
-      const order = orders[Number(row.dataset.index)];
+      const order = pageOrders[Number(row.dataset.index)];
       openDrawer(order);
     });
   });
+
+  renderPagination('ordersPagination', orders.length);
+  syncUrlState();
 }
 
 function openDrawer(order) {
@@ -233,6 +336,7 @@ async function loadData() {
   document.getElementById('statusFilter').innerHTML =
     '<option value="">All statuses</option>' +
     uniqueStatuses.map((status) => `<option value="${status}">${status}</option>`).join('');
+  document.getElementById('statusFilter').value = selectedStatus || '';
 
   renderSummary();
   renderStores();
@@ -244,6 +348,7 @@ function wireControls() {
   document.getElementById('resetStore').addEventListener('click', () => {
     selectedStoreId = '';
     selectedStoreName = '';
+    currentPage = 1;
     renderStores();
     renderOrders();
     loadTrends();
@@ -251,6 +356,7 @@ function wireControls() {
 
   document.getElementById('statusFilter').addEventListener('change', (event) => {
     selectedStatus = event.target.value;
+    currentPage = 1;
     renderOrders();
   });
 
@@ -261,14 +367,17 @@ function wireControls() {
 
   document.getElementById('searchInput').addEventListener('input', (event) => {
     searchText = event.target.value.trim().toLowerCase();
+    currentPage = 1;
     renderOrders();
   });
 
   document.getElementById('fromDate').addEventListener('change', () => {
+    currentPage = 1;
     loadData();
   });
 
   document.getElementById('toDate').addEventListener('change', () => {
+    currentPage = 1;
     loadData();
   });
 
@@ -278,6 +387,7 @@ function wireControls() {
 }
 
 wireControls();
+initStateFromUrl();
 loadData().catch((err) => {
   document.getElementById('generatedAt').textContent = `Failed to load dashboard data: ${err.message}`;
 });
