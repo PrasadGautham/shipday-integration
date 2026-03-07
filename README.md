@@ -18,6 +18,7 @@ Each received event is also saved per order in `data/orders/<orderNumber>_<order
 
 - `GET /health`
   - No auth.
+  - Includes storage writability/free-disk checks and derived-write queue health.
 - `GET /dashboard`
   - Read-only web UI for orders by store (`pickup_details`) with delivery timing analytics.
 - `GET /api/dashboard/summary`
@@ -41,6 +42,7 @@ Each received event is also saved per order in `data/orders/<orderNumber>_<order
   - Returns consistency checks between NDJSON total events and aggregated per-order event counts.
 
 All dashboard APIs clamp date filtering to the latest `MAX_FILTER_RANGE_DAYS` (default 62 days).
+Webhook writes are NDJSON-first (source of truth), with per-order files updated asynchronously.
 
 ## Quick Start
 
@@ -68,6 +70,9 @@ https://<your-domain>/webhooks/shipday/order-status-update?token=<SHIPDAY_WEBHOO
 - `DASHBOARD_CACHE_TTL_MS` default `5000` (dashboard dataset cache TTL)
 - `MAX_FILTER_RANGE_DAYS` default `62` (latest-range clamp for dashboard APIs)
 - `REBUILD_ORDERS_ON_START` default `true` (rebuild `data/orders` from NDJSON at startup)
+- `MIN_FREE_DISK_MB` default `256` (health fails if free disk is lower)
+- `WEBHOOK_DEDUPE_TTL_MS` default `600000` (10 min duplicate payload window)
+- `WEBHOOK_DEDUPE_LIMIT` default `5000` (max in-memory dedupe keys)
 
 ## Sample test request
 

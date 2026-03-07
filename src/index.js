@@ -1,6 +1,7 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
+const crypto = require('node:crypto');
 const { getConfig } = require('./config');
 const { EventTracker } = require('./eventTracker');
 const { buildDashboardData, withDateRange, buildTrendSeries, buildStoreDetails } = require('./dashboardData');
@@ -15,6 +16,11 @@ const tracker = new EventTracker({
 });
 
 let dashboardCache = null;
+let derivedWriteQueue = Promise.resolve();
+let pendingDerivedWrites = 0;
+let lastDerivedWriteError = null;
+let lastDerivedWriteAt = null;
+const dedupeMap = new Map();
 
 const knownShipdayStatuses = [
   'STARTED',
@@ -238,6 +244,128 @@ function buildIntegrityReport(baseData) {
   };
 }
 
+function hashPayload(payload) {
+  const serialized = JSON.stringify(payload);
+  return crypto.createHash('sha1').update(serialized).digest('hex');
+}
+
+function cleanupDedupe(nowMs) {
+  for (const [key, expiresAt] of dedupeMap.entries()) {
+    if (expiresAt <= nowMs) {
+      dedupeMap.delete(key);
+    }
+  }
+
+  if (dedupeMap.size <= config.webhookDedupeLimit) {
+    return;
+  }
+
+  const overflow = dedupeMap.size - config.webhookDedupeLimit;
+  let trimmed = 0;
+  for (const key of dedupeMap.keys()) {
+    dedupeMap.delete(key);
+    trimmed += 1;
+    if (trimmed >= overflow) {
+      break;
+    }
+  }
+}
+
+function isDuplicateWebhook(payload) {
+  const nowMs = Date.now();
+  cleanupDedupe(nowMs);
+
+  const signature = hashPayload(payload);
+  const expiresAt = dedupeMap.get(signature);
+  if (expiresAt && expiresAt > nowMs) {
+    return true;
+  }
+
+  dedupeMap.set(signature, nowMs + config.webhookDedupeTtlMs);
+  return false;
+}
+
+function isFilesystemWriteError(err) {
+  return ['ENOSPC', 'EACCES', 'EPERM', 'EROFS', 'EBUSY'].includes(err?.code);
+}
+
+function enqueueDerivedWrite(event) {
+  pendingDerivedWrites += 1;
+  derivedWriteQueue = derivedWriteQueue
+    .then(() => {
+      tracker.appendPerOrderLog(event);
+      lastDerivedWriteAt = new Date().toISOString();
+      lastDerivedWriteError = null;
+      invalidateDashboardCache();
+    })
+    .catch((err) => {
+      lastDerivedWriteError = {
+        message: err?.message || 'Derived write failed',
+        code: err?.code || 'UNKNOWN',
+        at: new Date().toISOString()
+      };
+      console.error('Derived order-write failed:', err);
+    })
+    .finally(() => {
+      pendingDerivedWrites = Math.max(0, pendingDerivedWrites - 1);
+    });
+}
+
+function isWritable(targetPath) {
+  try {
+    fs.accessSync(targetPath, fs.constants.W_OK);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function freeDiskMb(targetPath) {
+  if (typeof fs.statfsSync !== 'function') {
+    return null;
+  }
+  try {
+    const stat = fs.statfsSync(targetPath);
+    const bytes = Number(stat.bsize) * Number(stat.bavail);
+    if (!Number.isFinite(bytes)) {
+      return null;
+    }
+    return Math.round((bytes / (1024 * 1024)) * 10) / 10;
+  } catch {
+    return null;
+  }
+}
+
+function buildStorageHealth() {
+  const eventDir = path.dirname(config.eventStoreFile);
+  const orderDir = config.orderEventsDir;
+
+  const eventWritable = isWritable(eventDir);
+  const orderWritable = isWritable(orderDir);
+  const eventFreeMb = freeDiskMb(eventDir);
+  const orderFreeMb = freeDiskMb(orderDir);
+
+  const lowEventDisk = eventFreeMb !== null && eventFreeMb < config.minFreeDiskMb;
+  const lowOrderDisk = orderFreeMb !== null && orderFreeMb < config.minFreeDiskMb;
+
+  return {
+    ok: eventWritable && orderWritable && !lowEventDisk && !lowOrderDisk,
+    minFreeDiskMb: config.minFreeDiskMb,
+    paths: {
+      eventDir: {
+        path: eventDir,
+        writable: eventWritable,
+        freeMb: eventFreeMb
+      },
+      orderDir: {
+        path: orderDir,
+        writable: orderWritable,
+        freeMb: orderFreeMb
+      }
+    }
+  };
+}
+
 function parseJsonBody(req) {
   return new Promise((resolve, reject) => {
     let raw = '';
@@ -283,7 +411,18 @@ async function handleRequest(req, res) {
   const dashboardDir = path.join(__dirname, '..', 'public');
 
   if (reqUrl.pathname === '/health' && req.method === 'GET') {
-    sendJson(res, 200, { ok: true });
+    const storage = buildStorageHealth();
+    const derivedHealthy = pendingDerivedWrites === 0 && !lastDerivedWriteError;
+    const ok = storage.ok && derivedHealthy;
+    sendJson(res, ok ? 200 : 503, {
+      ok,
+      storage,
+      derived: {
+        pendingWrites: pendingDerivedWrites,
+        lastWriteAt: lastDerivedWriteAt,
+        lastError: lastDerivedWriteError
+      }
+    });
     return;
   }
 
@@ -425,8 +564,30 @@ async function handleRequest(req, res) {
     }
 
     const payload = await parseJsonBody(req);
-    const event = tracker.add(payload);
-    invalidateDashboardCache();
+    if (isDuplicateWebhook(payload)) {
+      sendJson(res, 200, {
+        accepted: true,
+        duplicate: true
+      });
+      return;
+    }
+
+    let event;
+    try {
+      event = tracker.add(payload, { writePerOrder: false, fsyncStore: true });
+    } catch (err) {
+      if (isFilesystemWriteError(err)) {
+        sendJson(res, 503, {
+          accepted: false,
+          retryable: true,
+          error: `Filesystem write failure (${err.code})`
+        });
+        return;
+      }
+      throw err;
+    }
+
+    enqueueDerivedWrite(event);
 
     sendJson(res, 200, {
       accepted: true,

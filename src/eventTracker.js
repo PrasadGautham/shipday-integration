@@ -105,7 +105,9 @@ class EventTracker {
     return body;
   }
 
-  add(rawBody) {
+  add(rawBody, options = {}) {
+    const writePerOrder = options.writePerOrder !== false;
+    const fsyncStore = options.fsyncStore !== false;
     const normalizedBody = this.normalizePayload(rawBody);
     const extractedOrderId =
       normalizedBody?.orderId ||
@@ -130,11 +132,26 @@ class EventTracker {
     };
 
     this.applyEvent(event);
-    fs.appendFileSync(this.storePath, `${JSON.stringify(event)}\n`, 'utf8');
-    this.appendPerOrderLog(event);
+    this.appendEventToStore(event, fsyncStore);
+    if (writePerOrder) {
+      this.appendPerOrderLog(event);
+    }
     this.version += 1;
 
     return event;
+  }
+
+  appendEventToStore(event, shouldFsync = true) {
+    const line = `${JSON.stringify(event)}\n`;
+    const fd = fs.openSync(this.storePath, 'a');
+    try {
+      fs.writeSync(fd, line, null, 'utf8');
+      if (shouldFsync) {
+        fs.fsyncSync(fd);
+      }
+    } finally {
+      fs.closeSync(fd);
+    }
   }
 
   clearOrderFiles() {
