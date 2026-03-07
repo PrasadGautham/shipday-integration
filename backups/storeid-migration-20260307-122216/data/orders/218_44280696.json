@@ -1,0 +1,635 @@
+{
+  "orderId": "44280696",
+  "orderNumber": "218",
+  "eventCount": 7,
+  "events": [
+    {
+      "receivedAt": "2026-03-06T18:19:00.869Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44280696,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772821138445,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44280696,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 935,
+          "eta": "",
+          "driving_distance": 13615,
+          "placement_time": 1772821138000,
+          "expected_pickup_time": 1772822280000,
+          "expected_delivery_time": 1772824680000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61077288,
+          "name": "TALAL",
+          "phone": "+96555450554",
+          "address": "Block 2, Mishref, Kuwait",
+          "formatted_address": "Block 2, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2839681,
+            "lng": 48.06423059999999
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab, ",
+          "formatted_address": "Proper Sliders, Shaab, ",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBudnh5Z3k=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T18:20:04.735Z",
+      "status": "STARTED",
+      "orderId": 44280696,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772821202264,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44280696,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 935,
+          "eta": "",
+          "driving_distance": 13615,
+          "placement_time": 1772821138000,
+          "expected_pickup_time": 1772822280000,
+          "expected_delivery_time": 1772824680000,
+          "assigned_time": 1772821173000,
+          "start_time": 1772821202000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61077288,
+          "name": "TALAL",
+          "phone": "+96555450554",
+          "address": "Block 2, Mishref, Kuwait",
+          "formatted_address": "Block 2, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2839681,
+            "lng": 48.06423059999999
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab, ",
+          "formatted_address": "Proper Sliders, Shaab, ",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 495913,
+          "name": "osman 2 ",
+          "phone": "+96560026054",
+          "email": "mobamedosman3@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBudnh5Z3k=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T18:20:09.692Z",
+      "status": "PICKED_UP",
+      "orderId": 44280696,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772821207301,
+        "event": "ORDER_PIKEDUP",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44280696,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 935,
+          "eta": "",
+          "driving_distance": 13615,
+          "placement_time": 1772821138000,
+          "expected_pickup_time": 1772822280000,
+          "expected_delivery_time": 1772824680000,
+          "assigned_time": 1772821173000,
+          "start_time": 1772821202000,
+          "pickedup_time": 1772821207000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61077288,
+          "name": "TALAL",
+          "phone": "+96555450554",
+          "address": "Block 2, Mishref, Kuwait",
+          "formatted_address": "Block 2, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2839681,
+            "lng": 48.06423059999999
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab, ",
+          "formatted_address": "Proper Sliders, Shaab, ",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 495913,
+          "name": "osman 2 ",
+          "phone": "+96560026054",
+          "email": "mobamedosman3@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBudnh5Z3k=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T18:20:22.283Z",
+      "status": "STARTED",
+      "orderId": 44280696,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772821219824,
+        "event": "ORDER_PIKEDUP_REMOVED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44280696,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 935,
+          "eta": "",
+          "driving_distance": 13615,
+          "placement_time": 1772821138000,
+          "expected_pickup_time": 1772822280000,
+          "expected_delivery_time": 1772824680000,
+          "assigned_time": 1772821173000,
+          "start_time": 1772821202000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61077288,
+          "name": "TALAL",
+          "phone": "+96555450554",
+          "address": "Block 2, Mishref, Kuwait",
+          "formatted_address": "Block 2, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2839681,
+            "lng": 48.06423059999999
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab, ",
+          "formatted_address": "Proper Sliders, Shaab, ",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 495913,
+          "name": "osman 2 ",
+          "phone": "+96560026054",
+          "email": "mobamedosman3@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBudnh5Z3k=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T18:30:46.416Z",
+      "status": "PICKED_UP",
+      "orderId": 44280696,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772821843946,
+        "event": "ORDER_PIKEDUP",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44280696,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 935,
+          "eta": "",
+          "driving_distance": 13615,
+          "placement_time": 1772821138000,
+          "expected_pickup_time": 1772822280000,
+          "expected_delivery_time": 1772824680000,
+          "assigned_time": 1772821173000,
+          "start_time": 1772821202000,
+          "pickedup_time": 1772821844000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61077288,
+          "name": "TALAL",
+          "phone": "+96555450554",
+          "address": "Block 2, Mishref, Kuwait",
+          "formatted_address": "Block 2, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2839681,
+            "lng": 48.06423059999999
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab, ",
+          "formatted_address": "Proper Sliders, Shaab, ",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 495913,
+          "name": "osman 2 ",
+          "phone": "+96560026054",
+          "email": "mobamedosman3@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBudnh5Z3k=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T18:52:32.166Z",
+      "status": "READY_TO_DELIVER",
+      "orderId": 44280696,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772823149713,
+        "event": "ORDER_ONTHEWAY",
+        "order_status": "READY_TO_DELIVER",
+        "order": {
+          "id": 44280696,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 935,
+          "eta": "",
+          "driving_distance": 13615,
+          "placement_time": 1772821138000,
+          "expected_pickup_time": 1772822280000,
+          "expected_delivery_time": 1772824680000,
+          "assigned_time": 1772821173000,
+          "start_time": 1772821202000,
+          "pickedup_time": 1772821844000,
+          "arrived_time": 1772823150000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61077288,
+          "name": "TALAL",
+          "phone": "+96555450554",
+          "address": "Block 2, Mishref, Kuwait",
+          "formatted_address": "Block 2, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2839681,
+            "lng": 48.06423059999999
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab, ",
+          "formatted_address": "Proper Sliders, Shaab, ",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 495913,
+          "name": "osman 2 ",
+          "phone": "+96560026054",
+          "email": "mobamedosman3@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBudnh5Z3k=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T18:52:37.095Z",
+      "status": "ALREADY_DELIVERED",
+      "orderId": 44280696,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772823154860,
+        "event": "ORDER_COMPLETED",
+        "order_status": "ALREADY_DELIVERED",
+        "order": {
+          "id": 44280696,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 935,
+          "eta": "",
+          "driving_distance": 13615,
+          "placement_time": 1772821138000,
+          "expected_pickup_time": 1772822280000,
+          "expected_delivery_time": 1772824680000,
+          "assigned_time": 1772821173000,
+          "start_time": 1772821202000,
+          "pickedup_time": 1772821844000,
+          "arrived_time": 1772823150000,
+          "delivery_time": 1772823155000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61077288,
+          "name": "TALAL",
+          "phone": "+96555450554",
+          "address": "Block 2, Mishref, Kuwait",
+          "formatted_address": "Block 2, Mishref, Kuwait",
+          "location": {
+            "lat": 29.2839681,
+            "lng": 48.06423059999999
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab, ",
+          "formatted_address": "Proper Sliders, Shaab, ",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 495913,
+          "name": "osman 2 ",
+          "phone": "+96560026054",
+          "email": "mobamedosman3@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBudnh5Z3k=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-06T18:52:37.095Z",
+  "lastStatus": "ALREADY_DELIVERED"
+}

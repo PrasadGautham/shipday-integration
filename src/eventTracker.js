@@ -58,19 +58,50 @@ class EventTracker {
     return String(rawStatus).trim().toUpperCase();
   }
 
+  normalizeStoreText(value) {
+    return String(value || '')
+      .replace(/Ã˜Å’|Ã˜ÂŒ|ØŒ/g, ',')
+      .replace(/\s*,\s*/g, ', ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  normalizePayload(rawBody) {
+    if (!rawBody || typeof rawBody !== 'object') {
+      return rawBody;
+    }
+
+    const body = JSON.parse(JSON.stringify(rawBody));
+    const pickup = body.pickup_details;
+    if (pickup && typeof pickup === 'object') {
+      if (pickup.name) {
+        pickup.name = this.normalizeStoreText(pickup.name);
+      }
+      if (pickup.address) {
+        pickup.address = this.normalizeStoreText(pickup.address);
+      }
+      if (pickup.formatted_address) {
+        pickup.formatted_address = this.normalizeStoreText(pickup.formatted_address);
+      }
+    }
+
+    return body;
+  }
+
   add(rawBody) {
+    const normalizedBody = this.normalizePayload(rawBody);
     const extractedOrderId =
-      rawBody?.orderId ||
-      rawBody?.order_id ||
-      rawBody?.id ||
-      rawBody?.order?.id ||
+      normalizedBody?.orderId ||
+      normalizedBody?.order_id ||
+      normalizedBody?.id ||
+      normalizedBody?.order?.id ||
       null;
     const extractedOrderNumber =
-      rawBody?.orderNumber ||
-      rawBody?.order_number ||
-      rawBody?.order?.order_number ||
+      normalizedBody?.orderNumber ||
+      normalizedBody?.order_number ||
+      normalizedBody?.order?.order_number ||
       null;
-    const status = this.normalizeStatus(rawBody?.status || rawBody?.order_status || rawBody?.event);
+    const status = this.normalizeStatus(normalizedBody?.status || normalizedBody?.order_status || normalizedBody?.event);
 
     const event = {
       receivedAt: new Date().toISOString(),
@@ -78,7 +109,7 @@ class EventTracker {
       orderId: extractedOrderId,
       orderNumber: extractedOrderNumber,
       source: 'shipday',
-      payload: rawBody
+      payload: normalizedBody
     };
 
     this.applyEvent(event);
@@ -88,12 +119,31 @@ class EventTracker {
     return event;
   }
 
+  resolveOrderFilePath(orderId, orderNumber) {
+    if (orderId) {
+      const orderIdSuffix = `_${orderId}.json`;
+      const candidates = fs
+        .readdirSync(this.orderEventsDir)
+        .filter((name) => name.endsWith('.json'))
+        .filter((name) => name === `${orderId}.json` || name.endsWith(orderIdSuffix))
+        .sort((a, b) => a.localeCompare(b));
+
+      if (candidates.length > 0) {
+        // Prefer the structured name "<orderNumber>_<orderId>.json" when present.
+        const preferred = candidates.find((name) => name !== `${orderId}.json`) || candidates[0];
+        return path.join(this.orderEventsDir, preferred);
+      }
+    }
+
+    const rawFileKey = orderNumber && orderId ? `${orderNumber}_${orderId}` : orderId || 'unknown-order';
+    const safeFileKey = rawFileKey.replace(/[^a-zA-Z0-9._-]/g, '_');
+    return path.join(this.orderEventsDir, `${safeFileKey}.json`);
+  }
+
   appendPerOrderLog(event) {
     const orderId = event.orderId ? String(event.orderId) : null;
     const orderNumber = event.orderNumber ? String(event.orderNumber) : null;
-    const rawFileKey = orderNumber && orderId ? `${orderNumber}_${orderId}` : orderId || 'unknown-order';
-    const safeFileKey = rawFileKey.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const orderFilePath = path.join(this.orderEventsDir, `${safeFileKey}.json`);
+    const orderFilePath = this.resolveOrderFilePath(orderId, orderNumber);
 
     let record = {
       orderId: orderId || 'unknown-order',
@@ -113,8 +163,8 @@ class EventTracker {
       }
     }
 
-    record.orderId = orderId || 'unknown-order';
-    record.orderNumber = orderNumber;
+    record.orderId = orderId || record.orderId || 'unknown-order';
+    record.orderNumber = record.orderNumber || orderNumber;
     record.events.push(event);
     record.eventCount = record.events.length;
     record.lastReceivedAt = event.receivedAt;

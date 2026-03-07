@@ -1,0 +1,1007 @@
+{
+  "orderId": "44309087",
+  "orderNumber": "40",
+  "eventCount": 12,
+  "events": [
+    {
+      "receivedAt": "2026-03-07T00:47:14.446Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772844433566,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:48:07.450Z",
+      "status": "STARTED",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772844486849,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000,
+          "assigned_time": 1772844448000,
+          "start_time": 1772844487000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:49:14.283Z",
+      "status": "PICKED_UP",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772844553368,
+        "event": "ORDER_PIKEDUP",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000,
+          "assigned_time": 1772844448000,
+          "start_time": 1772844487000,
+          "pickedup_time": 1772844553000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:49:15.543Z",
+      "status": "READY_TO_DELIVER",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772844554660,
+        "event": "ORDER_ONTHEWAY",
+        "order_status": "READY_TO_DELIVER",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000,
+          "assigned_time": 1772844448000,
+          "start_time": 1772844487000,
+          "pickedup_time": 1772844553000,
+          "arrived_time": 1772844555000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:50:06.131Z",
+      "status": "PICKED_UP",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772844605236,
+        "event": "ORDER_ONTHEWAY_REMOVED",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000,
+          "assigned_time": 1772844448000,
+          "start_time": 1772844487000,
+          "pickedup_time": 1772844553000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T01:14:13.345Z",
+      "status": "READY_TO_DELIVER",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772846052712,
+        "event": "ORDER_ONTHEWAY",
+        "order_status": "READY_TO_DELIVER",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000,
+          "assigned_time": 1772844448000,
+          "start_time": 1772844487000,
+          "pickedup_time": 1772844553000,
+          "arrived_time": 1772846053000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T01:14:56.685Z",
+      "status": "PICKED_UP",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772846092136,
+        "event": "ORDER_ONTHEWAY_REMOVED",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000,
+          "assigned_time": 1772844448000,
+          "start_time": 1772844487000,
+          "pickedup_time": 1772844553000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T01:14:56.766Z",
+      "status": "STARTED",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772846095559,
+        "event": "ORDER_PIKEDUP_REMOVED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000,
+          "assigned_time": 1772844448000,
+          "start_time": 1772844487000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T01:43:39.563Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772847818609,
+        "event": "ORDER_UNASSIGNED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T01:45:11.773Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772847910798,
+        "event": "ORDER_UNASSIGNED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T01:47:12.451Z",
+      "status": "STARTED",
+      "orderId": 44309087,
+      "orderNumber": "40",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772848031281,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44309087,
+          "order_number": "40",
+          "provider": "",
+          "order_item": "[{\"name\":\"Junkyard Hamra\",\"detail\":\"\",\"quantity\":1,\"unitPrice\":0,\"addOns\":null}]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 1089,
+          "eta": "",
+          "driving_distance": 15975,
+          "placement_time": 1772844434000,
+          "expected_pickup_time": 1772845500000,
+          "expected_delivery_time": 1772847900000,
+          "assigned_time": 1772848018000,
+          "start_time": 1772848031000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61105605,
+          "name": "NASER",
+          "phone": "+96556686612",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseGd4dnE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T01:50:38.539Z",
+      "status": "DELETED",
+      "orderId": 44309087,
+      "orderNumber": null,
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772848237398,
+        "event": "ORDER_DELETE",
+        "order_status": "DELETED",
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "order_id": 44309087,
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-07T01:50:38.539Z",
+  "lastStatus": "DELETED"
+}

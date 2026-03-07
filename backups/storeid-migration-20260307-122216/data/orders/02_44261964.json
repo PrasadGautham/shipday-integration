@@ -1,0 +1,122 @@
+{
+  "orderId": "44261964",
+  "orderNumber": "02",
+  "eventCount": 2,
+  "events": [
+    {
+      "receivedAt": "2026-03-06T17:15:16.477Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44261964,
+      "orderNumber": "02",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772792003016,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44261964,
+          "order_number": "02",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 802,
+          "eta": "",
+          "driving_distance": 6643,
+          "placement_time": 1772792003000,
+          "expected_pickup_time": 1772793120000,
+          "expected_delivery_time": 1772795520000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61058752,
+          "name": "HUSRIN",
+          "phone": "+96566466660",
+          "address": "Jabriya, Kuwait",
+          "formatted_address": "Jabriya, Kuwait",
+          "location": {
+            "lat": 29.3199043,
+            "lng": 48.0255416
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City، Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab, ",
+          "formatted_address": "Proper Sliders, Shaab, ",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBueWFneXA=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T17:29:36.245Z",
+      "status": "DELETED",
+      "orderId": 44261964,
+      "orderNumber": null,
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772792062567,
+        "event": "ORDER_DELETE",
+        "order_status": "DELETED",
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "order_id": 44261964,
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-06T17:29:36.245Z",
+  "lastStatus": "DELETED"
+}

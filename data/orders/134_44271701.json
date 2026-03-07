@@ -1,19 +1,21 @@
 {
-  "orderId": "44236366",
-  "eventCount": 5,
+  "orderId": "44271701",
+  "orderNumber": "134",
+  "eventCount": 6,
   "events": [
     {
-      "receivedAt": "2026-03-05T19:21:46.843Z",
+      "receivedAt": "2026-03-06T16:07:10.367Z",
       "status": "NOT_ASSIGNED",
-      "orderId": null,
+      "orderId": 44271701,
+      "orderNumber": "134",
       "source": "shipday",
       "payload": {
-        "timestamp": 1772738505954,
+        "timestamp": 1772813228123,
         "event": "ORDER_INSERTED",
         "order_status": "NOT_ASSIGNED",
         "order": {
-          "id": 44236366,
-          "order_number": "90944453",
+          "id": 44271701,
+          "order_number": "134",
           "provider": "",
           "order_item": "[]",
           "order_source": "SD_INT_3P",
@@ -28,12 +30,12 @@
           "discount_amount": 0,
           "tax": 0,
           "podUrls": [],
-          "driving_duration": 1090,
+          "driving_duration": 855,
           "eta": "",
-          "driving_distance": 15144,
-          "placement_time": 1772738506000,
-          "expected_pickup_time": 1772739540000,
-          "expected_delivery_time": 1772741940000
+          "driving_distance": 8412,
+          "placement_time": 1772813228000,
+          "expected_pickup_time": 1772814300000,
+          "expected_delivery_time": 1772816700000
         },
         "company": {
           "id": 148930,
@@ -47,21 +49,21 @@
           "order_activation_time_mins": 90,
           "currency_code": 414,
           "schedule_order_lead_time_sec": 4500,
-          "max_assigned_order": 3,
+          "max_assigned_order": 10,
           "routing": 0,
           "country": 111,
           "admin_area": "Al Ahmadi Governorate",
           "routing_cost": "TRAVEL_TIME"
         },
         "delivery_details": {
-          "id": 61033326,
-          "name": "nourah",
-          "phone": "+96590944453",
-          "address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
-          "formatted_address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
+          "id": 61068339,
+          "name": "SUNDUS",
+          "phone": "+96565744771",
+          "address": "Rawda, Kuwait",
+          "formatted_address": "Rawda, Kuwait",
           "location": {
-            "lat": 29.3152874,
-            "lng": 48.0632366
+            "lat": 29.3290126,
+            "lng": 47.99855119999999
           }
         },
         "pickup_details": {
@@ -74,25 +76,114 @@
             "lng": 47.9932879
           }
         },
-        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBubHlseXk=",
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBucWFxeGE=",
         "pods": [],
         "signatures": [],
         "delivery_note": ""
       }
     },
     {
-      "receivedAt": "2026-03-05T19:34:43.037Z",
-      "status": "STARTED",
-      "orderId": 44236366,
-      "orderNumber": "90944453",
+      "receivedAt": "2026-03-06T16:07:24.886Z",
+      "status": "NOT_ACCEPTED",
+      "orderId": 44271701,
+      "orderNumber": "134",
       "source": "shipday",
       "payload": {
-        "timestamp": 1772739282111,
+        "timestamp": 1772813242692,
+        "event": "ORDER_ASSIGNED",
+        "order_status": "NOT_ACCEPTED",
+        "order": {
+          "id": 44271701,
+          "order_number": "134",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 855,
+          "eta": "",
+          "driving_distance": 8412,
+          "placement_time": 1772813228000,
+          "expected_pickup_time": 1772814300000,
+          "expected_delivery_time": 1772816700000,
+          "assigned_time": 1772813243000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61068339,
+          "name": "SUNDUS",
+          "phone": "+96565744771",
+          "address": "Rawda, Kuwait",
+          "formatted_address": "Rawda, Kuwait",
+          "location": {
+            "lat": 29.3290126,
+            "lng": 47.99855119999999
+          }
+        },
+        "pickup_details": {
+          "name": "One Eatery - Al Hamra",
+          "phone": "+96556642522",
+          "address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "formatted_address": "Al Hamra Tower, Al Kuwayt, Kuwait",
+          "location": {
+            "lat": 29.3790539,
+            "lng": 47.9932879
+          }
+        },
+        "carrier": {
+          "id": 493818,
+          "name": "jabbar ",
+          "phone": "+96566539217",
+          "email": "mottanshajakhan@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBucWFxeGE=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T16:07:42.760Z",
+      "status": "STARTED",
+      "orderId": 44271701,
+      "orderNumber": "134",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772813260391,
         "event": "ORDER_ACCEPTED_AND_STARTED",
         "order_status": "STARTED",
         "order": {
-          "id": 44236366,
-          "order_number": "90944453",
+          "id": 44271701,
+          "order_number": "134",
           "provider": "",
           "order_item": "[]",
           "order_source": "SD_INT_3P",
@@ -107,14 +198,14 @@
           "discount_amount": 0,
           "tax": 0,
           "podUrls": [],
-          "driving_duration": 1090,
+          "driving_duration": 855,
           "eta": "",
-          "driving_distance": 15144,
-          "placement_time": 1772738506000,
-          "expected_pickup_time": 1772739540000,
-          "expected_delivery_time": 1772741940000,
-          "assigned_time": 1772739268000,
-          "start_time": 1772739282000
+          "driving_distance": 8412,
+          "placement_time": 1772813228000,
+          "expected_pickup_time": 1772814300000,
+          "expected_delivery_time": 1772816700000,
+          "assigned_time": 1772813243000,
+          "start_time": 1772813260000
         },
         "company": {
           "id": 148930,
@@ -128,21 +219,21 @@
           "order_activation_time_mins": 90,
           "currency_code": 414,
           "schedule_order_lead_time_sec": 4500,
-          "max_assigned_order": 3,
+          "max_assigned_order": 10,
           "routing": 0,
           "country": 111,
           "admin_area": "Al Ahmadi Governorate",
           "routing_cost": "TRAVEL_TIME"
         },
         "delivery_details": {
-          "id": 61033326,
-          "name": "nourah",
-          "phone": "+96590944453",
-          "address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
-          "formatted_address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
+          "id": 61068339,
+          "name": "SUNDUS",
+          "phone": "+96565744771",
+          "address": "Rawda, Kuwait",
+          "formatted_address": "Rawda, Kuwait",
           "location": {
-            "lat": 29.3152874,
-            "lng": 48.0632366
+            "lat": 29.3290126,
+            "lng": 47.99855119999999
           }
         },
         "pickup_details": {
@@ -156,33 +247,33 @@
           }
         },
         "carrier": {
-          "id": 495131,
-          "name": "ashif ",
-          "phone": "+96566218143",
-          "email": "ashifashraf53@gmail.com",
+          "id": 493818,
+          "name": "jabbar ",
+          "phone": "+96566539217",
+          "email": "mottanshajakhan@gmail.com",
           "status": "ONLINE",
           "current_order": -1,
           "vehicle_description": ""
         },
-        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBubHlseXk=",
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBucWFxeGE=",
         "pods": [],
         "signatures": [],
         "delivery_note": ""
       }
     },
     {
-      "receivedAt": "2026-03-05T20:44:16.305Z",
+      "receivedAt": "2026-03-06T16:15:46.375Z",
       "status": "PICKED_UP",
-      "orderId": 44236366,
-      "orderNumber": "90944453",
+      "orderId": 44271701,
+      "orderNumber": "134",
       "source": "shipday",
       "payload": {
-        "timestamp": 1772743455263,
+        "timestamp": 1772813744192,
         "event": "ORDER_PIKEDUP",
         "order_status": "PICKED_UP",
         "order": {
-          "id": 44236366,
-          "order_number": "90944453",
+          "id": 44271701,
+          "order_number": "134",
           "provider": "",
           "order_item": "[]",
           "order_source": "SD_INT_3P",
@@ -197,15 +288,15 @@
           "discount_amount": 0,
           "tax": 0,
           "podUrls": [],
-          "driving_duration": 1090,
+          "driving_duration": 855,
           "eta": "",
-          "driving_distance": 15144,
-          "placement_time": 1772738506000,
-          "expected_pickup_time": 1772739540000,
-          "expected_delivery_time": 1772741940000,
-          "assigned_time": 1772739268000,
-          "start_time": 1772739282000,
-          "pickedup_time": 1772743455000
+          "driving_distance": 8412,
+          "placement_time": 1772813228000,
+          "expected_pickup_time": 1772814300000,
+          "expected_delivery_time": 1772816700000,
+          "assigned_time": 1772813243000,
+          "start_time": 1772813260000,
+          "pickedup_time": 1772813744000
         },
         "company": {
           "id": 148930,
@@ -219,21 +310,21 @@
           "order_activation_time_mins": 90,
           "currency_code": 414,
           "schedule_order_lead_time_sec": 4500,
-          "max_assigned_order": 3,
+          "max_assigned_order": 10,
           "routing": 0,
           "country": 111,
           "admin_area": "Al Ahmadi Governorate",
           "routing_cost": "TRAVEL_TIME"
         },
         "delivery_details": {
-          "id": 61033326,
-          "name": "nourah",
-          "phone": "+96590944453",
-          "address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
-          "formatted_address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
+          "id": 61068339,
+          "name": "SUNDUS",
+          "phone": "+96565744771",
+          "address": "Rawda, Kuwait",
+          "formatted_address": "Rawda, Kuwait",
           "location": {
-            "lat": 29.3152874,
-            "lng": 48.0632366
+            "lat": 29.3290126,
+            "lng": 47.99855119999999
           }
         },
         "pickup_details": {
@@ -247,33 +338,33 @@
           }
         },
         "carrier": {
-          "id": 495131,
-          "name": "ashif ",
-          "phone": "+96566218143",
-          "email": "ashifashraf53@gmail.com",
+          "id": 493818,
+          "name": "jabbar ",
+          "phone": "+96566539217",
+          "email": "mottanshajakhan@gmail.com",
           "status": "ONLINE",
           "current_order": -1,
           "vehicle_description": ""
         },
-        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBubHlseXk=",
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBucWFxeGE=",
         "pods": [],
         "signatures": [],
         "delivery_note": ""
       }
     },
     {
-      "receivedAt": "2026-03-05T20:44:23.681Z",
+      "receivedAt": "2026-03-06T16:33:04.415Z",
       "status": "READY_TO_DELIVER",
-      "orderId": 44236366,
-      "orderNumber": "90944453",
+      "orderId": 44271701,
+      "orderNumber": "134",
       "source": "shipday",
       "payload": {
-        "timestamp": 1772743462632,
+        "timestamp": 1772814782159,
         "event": "ORDER_ONTHEWAY",
         "order_status": "READY_TO_DELIVER",
         "order": {
-          "id": 44236366,
-          "order_number": "90944453",
+          "id": 44271701,
+          "order_number": "134",
           "provider": "",
           "order_item": "[]",
           "order_source": "SD_INT_3P",
@@ -288,16 +379,16 @@
           "discount_amount": 0,
           "tax": 0,
           "podUrls": [],
-          "driving_duration": 1090,
+          "driving_duration": 855,
           "eta": "",
-          "driving_distance": 15144,
-          "placement_time": 1772738506000,
-          "expected_pickup_time": 1772739540000,
-          "expected_delivery_time": 1772741940000,
-          "assigned_time": 1772739268000,
-          "start_time": 1772739282000,
-          "pickedup_time": 1772743455000,
-          "arrived_time": 1772743463000
+          "driving_distance": 8412,
+          "placement_time": 1772813228000,
+          "expected_pickup_time": 1772814300000,
+          "expected_delivery_time": 1772816700000,
+          "assigned_time": 1772813243000,
+          "start_time": 1772813260000,
+          "pickedup_time": 1772813744000,
+          "arrived_time": 1772814782000
         },
         "company": {
           "id": 148930,
@@ -311,21 +402,21 @@
           "order_activation_time_mins": 90,
           "currency_code": 414,
           "schedule_order_lead_time_sec": 4500,
-          "max_assigned_order": 3,
+          "max_assigned_order": 10,
           "routing": 0,
           "country": 111,
           "admin_area": "Al Ahmadi Governorate",
           "routing_cost": "TRAVEL_TIME"
         },
         "delivery_details": {
-          "id": 61033326,
-          "name": "nourah",
-          "phone": "+96590944453",
-          "address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
-          "formatted_address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
+          "id": 61068339,
+          "name": "SUNDUS",
+          "phone": "+96565744771",
+          "address": "Rawda, Kuwait",
+          "formatted_address": "Rawda, Kuwait",
           "location": {
-            "lat": 29.3152874,
-            "lng": 48.0632366
+            "lat": 29.3290126,
+            "lng": 47.99855119999999
           }
         },
         "pickup_details": {
@@ -339,33 +430,33 @@
           }
         },
         "carrier": {
-          "id": 495131,
-          "name": "ashif ",
-          "phone": "+96566218143",
-          "email": "ashifashraf53@gmail.com",
+          "id": 493818,
+          "name": "jabbar ",
+          "phone": "+96566539217",
+          "email": "mottanshajakhan@gmail.com",
           "status": "ONLINE",
           "current_order": -1,
           "vehicle_description": ""
         },
-        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBubHlseXk=",
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBucWFxeGE=",
         "pods": [],
         "signatures": [],
         "delivery_note": ""
       }
     },
     {
-      "receivedAt": "2026-03-05T20:44:30.309Z",
+      "receivedAt": "2026-03-06T23:34:03.763Z",
       "status": "ALREADY_DELIVERED",
-      "orderId": 44236366,
-      "orderNumber": "90944453",
+      "orderId": 44271701,
+      "orderNumber": "134",
       "source": "shipday",
       "payload": {
-        "timestamp": 1772743469304,
+        "timestamp": 1772814788626,
         "event": "ORDER_COMPLETED",
         "order_status": "ALREADY_DELIVERED",
         "order": {
-          "id": 44236366,
-          "order_number": "90944453",
+          "id": 44271701,
+          "order_number": "134",
           "provider": "",
           "order_item": "[]",
           "order_source": "SD_INT_3P",
@@ -380,17 +471,17 @@
           "discount_amount": 0,
           "tax": 0,
           "podUrls": [],
-          "driving_duration": 1090,
+          "driving_duration": 855,
           "eta": "",
-          "driving_distance": 15144,
-          "placement_time": 1772738506000,
-          "expected_pickup_time": 1772739540000,
-          "expected_delivery_time": 1772741940000,
-          "assigned_time": 1772739268000,
-          "start_time": 1772739282000,
-          "pickedup_time": 1772743455000,
-          "arrived_time": 1772743463000,
-          "delivery_time": 1772743468000
+          "driving_distance": 8412,
+          "placement_time": 1772813228000,
+          "expected_pickup_time": 1772814300000,
+          "expected_delivery_time": 1772816700000,
+          "assigned_time": 1772813243000,
+          "start_time": 1772813260000,
+          "pickedup_time": 1772813744000,
+          "arrived_time": 1772814782000,
+          "delivery_time": 1772814788000
         },
         "company": {
           "id": 148930,
@@ -404,21 +495,21 @@
           "order_activation_time_mins": 90,
           "currency_code": 414,
           "schedule_order_lead_time_sec": 4500,
-          "max_assigned_order": 3,
+          "max_assigned_order": 10,
           "routing": 0,
           "country": 111,
           "admin_area": "Al Ahmadi Governorate",
           "routing_cost": "TRAVEL_TIME"
         },
         "delivery_details": {
-          "id": 61033326,
-          "name": "nourah",
-          "phone": "+96590944453",
-          "address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
-          "formatted_address": "Rumaithaya Automatic Bakery, Rumaithiya, Kuwait",
+          "id": 61068339,
+          "name": "SUNDUS",
+          "phone": "+96565744771",
+          "address": "Rawda, Kuwait",
+          "formatted_address": "Rawda, Kuwait",
           "location": {
-            "lat": 29.3152874,
-            "lng": 48.0632366
+            "lat": 29.3290126,
+            "lng": 47.99855119999999
           }
         },
         "pickup_details": {
@@ -432,22 +523,21 @@
           }
         },
         "carrier": {
-          "id": 495131,
-          "name": "ashif ",
-          "phone": "+96566218143",
-          "email": "ashifashraf53@gmail.com",
+          "id": 493818,
+          "name": "jabbar ",
+          "phone": "+96566539217",
+          "email": "mottanshajakhan@gmail.com",
           "status": "ONLINE",
           "current_order": -1,
           "vehicle_description": ""
         },
-        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBubHlseXk=",
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBucWFxeGE=",
         "pods": [],
         "signatures": [],
         "delivery_note": ""
       }
     }
   ],
-  "lastReceivedAt": "2026-03-05T20:44:30.309Z",
-  "lastStatus": "ALREADY_DELIVERED",
-  "orderNumber": "90944453"
+  "lastReceivedAt": "2026-03-06T23:34:03.763Z",
+  "lastStatus": "ALREADY_DELIVERED"
 }

@@ -1,0 +1,210 @@
+{
+  "orderId": "44267475",
+  "orderNumber": "2147",
+  "eventCount": 3,
+  "events": [
+    {
+      "receivedAt": "2026-03-06T14:21:48.379Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44267475,
+      "orderNumber": "2147",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772806906368,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44267475,
+          "order_number": "2147",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 916,
+          "eta": "",
+          "driving_distance": 14881,
+          "placement_time": 1772806906000,
+          "expected_pickup_time": 1772808000000,
+          "expected_delivery_time": 1772809200000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61064161,
+          "name": "hamad",
+          "phone": "+96560463112",
+          "address": "Hitteen, Kuwait",
+          "formatted_address": "Hitteen, Kuwait",
+          "location": {
+            "lat": 29.2842433,
+            "lng": 48.0183705
+          }
+        },
+        "pickup_details": {
+          "name": "KLC Ardiya",
+          "phone": "+965566 40972",
+          "address": "Ardiya, Kuwait",
+          "formatted_address": "Ardiya, Kuwait",
+          "location": {
+            "lat": 29.2888091,
+            "lng": 47.905861
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBueXFwcWY=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T14:25:30.756Z",
+      "status": "STARTED",
+      "orderId": 44267475,
+      "orderNumber": "2147",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772807128680,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44267475,
+          "order_number": "2147",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 916,
+          "eta": "",
+          "driving_distance": 14881,
+          "placement_time": 1772806906000,
+          "expected_pickup_time": 1772808000000,
+          "expected_delivery_time": 1772809200000,
+          "assigned_time": 1772807098000,
+          "start_time": 1772807129000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61064161,
+          "name": "hamad",
+          "phone": "+96560463112",
+          "address": "Hitteen, Kuwait",
+          "formatted_address": "Hitteen, Kuwait",
+          "location": {
+            "lat": 29.2842433,
+            "lng": 48.0183705
+          }
+        },
+        "pickup_details": {
+          "name": "KLC Ardiya",
+          "phone": "+965566 40972",
+          "address": "Ardiya, Kuwait",
+          "formatted_address": "Ardiya, Kuwait",
+          "location": {
+            "lat": 29.2888091,
+            "lng": 47.905861
+          }
+        },
+        "carrier": {
+          "id": 496038,
+          "name": "fozan zamn",
+          "phone": "+96566107120",
+          "email": "fozan20112011@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBueXFwcWY=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T14:39:28.116Z",
+      "status": "DELETED",
+      "orderId": 44267475,
+      "orderNumber": null,
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772807966016,
+        "event": "ORDER_DELETE",
+        "order_status": "DELETED",
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "order_id": 44267475,
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-06T14:39:28.116Z",
+  "lastStatus": "DELETED"
+}

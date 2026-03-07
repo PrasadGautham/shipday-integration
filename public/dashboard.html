@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shipday Orders Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dashboard.css" />
+  </head>
+  <body>
+    <div class="bg-layer"></div>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">Readonly Operations View</p>
+        <h1>Delivery Control Board</h1>
+        <p id="generatedAt" class="subtle">Loading dataset...</p>
+      </header>
+
+      <section id="summaryCards" class="summary-grid"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Stores</h2>
+          <button id="resetStore" class="ghost-btn">Show All</button>
+        </div>
+        <div id="stores" class="company-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Orders</h2>
+          <div class="filters">
+            <input id="fromDate" type="date" />
+            <input id="toDate" type="date" />
+            <input id="searchInput" type="search" placeholder="Search order #, id, customer, store..." />
+            <select id="statusFilter">
+              <option value="">All statuses</option>
+            </select>
+            <select id="granularityFilter">
+              <option value="daily">Daily Trend</option>
+              <option value="hourly">Hourly Trend</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Order #</th>
+                <th>Store</th>
+                <th>Status</th>
+                <th>Placed</th>
+                <th>Delivered</th>
+                <th>Total Mins</th>
+              </tr>
+            </thead>
+            <tbody id="ordersBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Trend</h2>
+          <p id="trendLabel" class="subtle"></p>
+        </div>
+        <div id="trendChart" class="trend-chart"></div>
+      </section>
+    </main>
+
+    <aside id="detailDrawer" class="drawer hidden">
+      <div class="drawer-head">
+        <h3 id="drawerTitle">Order Details</h3>
+        <button id="closeDrawer" class="ghost-btn">Close</button>
+      </div>
+      <div id="drawerContent"></div>
+    </aside>
+
+    <script src="/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,637 @@
+{
+  "orderId": "44306897",
+  "orderNumber": "58",
+  "eventCount": 7,
+  "events": [
+    {
+      "receivedAt": "2026-03-07T00:09:23.163Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44306897,
+      "orderNumber": "58",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772842162353,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44306897,
+          "order_number": "58",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 932,
+          "eta": "",
+          "driving_distance": 14183,
+          "placement_time": 1772842162000,
+          "expected_pickup_time": 1772843280000,
+          "expected_delivery_time": 1772845680000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61103421,
+          "name": "FATMA",
+          "phone": "+96594955510",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseHl2Z3E=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:09:34.697Z",
+      "status": "STARTED",
+      "orderId": 44306897,
+      "orderNumber": "58",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772842173878,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44306897,
+          "order_number": "58",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 932,
+          "eta": "",
+          "driving_distance": 14183,
+          "placement_time": 1772842162000,
+          "expected_pickup_time": 1772843280000,
+          "expected_delivery_time": 1772845680000,
+          "assigned_time": 1772842168000,
+          "start_time": 1772842174000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61103421,
+          "name": "FATMA",
+          "phone": "+96594955510",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 496032,
+          "name": "zaman ",
+          "phone": "+96569004907",
+          "email": "zamanshaikh0010@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseHl2Z3E=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:09:39.693Z",
+      "status": "PICKED_UP",
+      "orderId": 44306897,
+      "orderNumber": "58",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772842178872,
+        "event": "ORDER_PIKEDUP",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44306897,
+          "order_number": "58",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 932,
+          "eta": "",
+          "driving_distance": 14183,
+          "placement_time": 1772842162000,
+          "expected_pickup_time": 1772843280000,
+          "expected_delivery_time": 1772845680000,
+          "assigned_time": 1772842168000,
+          "start_time": 1772842174000,
+          "pickedup_time": 1772842179000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61103421,
+          "name": "FATMA",
+          "phone": "+96594955510",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 496032,
+          "name": "zaman ",
+          "phone": "+96569004907",
+          "email": "zamanshaikh0010@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseHl2Z3E=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:12:10.224Z",
+      "status": "READY_TO_DELIVER",
+      "orderId": 44306897,
+      "orderNumber": "58",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772842329369,
+        "event": "ORDER_ONTHEWAY",
+        "order_status": "READY_TO_DELIVER",
+        "order": {
+          "id": 44306897,
+          "order_number": "58",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 932,
+          "eta": "",
+          "driving_distance": 14183,
+          "placement_time": 1772842162000,
+          "expected_pickup_time": 1772843280000,
+          "expected_delivery_time": 1772845680000,
+          "assigned_time": 1772842168000,
+          "start_time": 1772842174000,
+          "pickedup_time": 1772842179000,
+          "arrived_time": 1772842329000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61103421,
+          "name": "FATMA",
+          "phone": "+96594955510",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 496032,
+          "name": "zaman ",
+          "phone": "+96569004907",
+          "email": "zamanshaikh0010@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseHl2Z3E=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:13:50.448Z",
+      "status": "PICKED_UP",
+      "orderId": 44306897,
+      "orderNumber": "58",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772842429622,
+        "event": "ORDER_ONTHEWAY_REMOVED",
+        "order_status": "PICKED_UP",
+        "order": {
+          "id": 44306897,
+          "order_number": "58",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 932,
+          "eta": "",
+          "driving_distance": 14183,
+          "placement_time": 1772842162000,
+          "expected_pickup_time": 1772843280000,
+          "expected_delivery_time": 1772845680000,
+          "assigned_time": 1772842168000,
+          "start_time": 1772842174000,
+          "pickedup_time": 1772842179000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61103421,
+          "name": "FATMA",
+          "phone": "+96594955510",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 496032,
+          "name": "zaman ",
+          "phone": "+96569004907",
+          "email": "zamanshaikh0010@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseHl2Z3E=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:30:32.326Z",
+      "status": "READY_TO_DELIVER",
+      "orderId": 44306897,
+      "orderNumber": "58",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772843431399,
+        "event": "ORDER_ONTHEWAY",
+        "order_status": "READY_TO_DELIVER",
+        "order": {
+          "id": 44306897,
+          "order_number": "58",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 932,
+          "eta": "",
+          "driving_distance": 14183,
+          "placement_time": 1772842162000,
+          "expected_pickup_time": 1772843280000,
+          "expected_delivery_time": 1772845680000,
+          "assigned_time": 1772842168000,
+          "start_time": 1772842174000,
+          "pickedup_time": 1772842179000,
+          "arrived_time": 1772843431000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61103421,
+          "name": "FATMA",
+          "phone": "+96594955510",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 496032,
+          "name": "zaman ",
+          "phone": "+96569004907",
+          "email": "zamanshaikh0010@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseHl2Z3E=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-07T00:33:02.698Z",
+      "status": "ALREADY_DELIVERED",
+      "orderId": 44306897,
+      "orderNumber": "58",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772843581796,
+        "event": "ORDER_COMPLETED",
+        "order_status": "ALREADY_DELIVERED",
+        "order": {
+          "id": 44306897,
+          "order_number": "58",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CASH",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 932,
+          "eta": "",
+          "driving_distance": 14183,
+          "placement_time": 1772842162000,
+          "expected_pickup_time": 1772843280000,
+          "expected_delivery_time": 1772845680000,
+          "assigned_time": 1772842168000,
+          "start_time": 1772842174000,
+          "pickedup_time": 1772842179000,
+          "arrived_time": 1772843431000,
+          "delivery_time": 1772843582000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61103421,
+          "name": "FATMA",
+          "phone": "+96594955510",
+          "address": "Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2765981,
+            "lng": 48.0481132
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 496032,
+          "name": "zaman ",
+          "phone": "+96569004907",
+          "email": "zamanshaikh0010@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBseHl2Z3E=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-07T00:33:02.698Z",
+  "lastStatus": "ALREADY_DELIVERED"
+}

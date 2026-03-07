@@ -1,0 +1,132 @@
+{
+    "orderId":  "44238095",
+    "orderNumber":  "221",
+    "eventCount":  2,
+    "events":  [
+                   {
+                       "receivedAt":  "2026-03-05T19:49:41.085Z",
+                       "status":  "NOT_ASSIGNED",
+                       "orderId":  44238095,
+                       "orderNumber":  "221",
+                       "source":  "shipday",
+                       "payload":  {
+                                       "timestamp":  1772740180137,
+                                       "event":  "ORDER_INSERTED",
+                                       "order_status":  "NOT_ASSIGNED",
+                                       "order":  {
+                                                     "id":  44238095,
+                                                     "order_number":  "221",
+                                                     "provider":  "",
+                                                     "order_item":  "[]",
+                                                     "order_source":  "SD_INT_3P",
+                                                     "auto_assignment_status":  "NOT_ASSIGNED",
+                                                     "parent_id":  -1,
+                                                     "order_sequence_number":  0,
+                                                     "payment_method":  "CREDIT_CARD",
+                                                     "total_cost":  0,
+                                                     "delivery_fee":  1.25,
+                                                     "predefined_tip":  0,
+                                                     "cash_tip":  0,
+                                                     "discount_amount":  0,
+                                                     "tax":  0,
+                                                     "podUrls":  [
+
+                                                                 ],
+                                                     "driving_duration":  955,
+                                                     "eta":  "",
+                                                     "driving_distance":  13938,
+                                                     "placement_time":  1772740180000,
+                                                     "expected_pickup_time":  1772741280000,
+                                                     "expected_delivery_time":  1772743680000
+                                                 },
+                                       "company":  {
+                                                       "id":  148930,
+                                                       "name":  "Moisunce Delivery Company",
+                                                       "description":  "N/A",
+                                                       "address":  "Kuwait City, Kuwait",
+                                                       "principal_area_id":  148894,
+                                                       "order_acceptance_timeout":  120,
+                                                       "average_speed_mps":  8,
+                                                       "fixed_driver_fee":  0,
+                                                       "order_activation_time_mins":  90,
+                                                       "currency_code":  414,
+                                                       "schedule_order_lead_time_sec":  4500,
+                                                       "max_assigned_order":  3,
+                                                       "routing":  0,
+                                                       "country":  111,
+                                                       "admin_area":  "Al Ahmadi Governorate",
+                                                       "routing_cost":  "TRAVEL_TIME"
+                                                   },
+                                       "delivery_details":  {
+                                                                "id":  61035046,
+                                                                "name":  "HUSSAIN",
+                                                                "phone":  "+96596662661",
+                                                                "address":  "Mishref, Kuwait",
+                                                                "formatted_address":  "Mishref, Kuwait",
+                                                                "location":  {
+                                                                                 "lat":  29.2765468,
+                                                                                 "lng":  48.06732479999999
+                                                                             }
+                                                            },
+                                       "pickup_details":  {
+                                                              "name":  "Proper Sliders, Kuwait City، Kuwait",
+                                                              "phone":  "+965566 42559",
+                                                              "address":  "Proper Sliders, Kuwait City، Kuwait",
+                                                              "formatted_address":  "Proper Sliders, Kuwait City، Kuwait",
+                                                              "location":  {
+                                                                               "lat":  29.34818509999999,
+                                                                               "lng":  48.0310724
+                                                                           }
+                                                          },
+                                       "trackingUrl":  "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBubHZ4Z2Y=",
+                                       "pods":  [
+
+                                                ],
+                                       "signatures":  [
+
+                                                      ],
+                                       "delivery_note":  ""
+                                   }
+                   },
+                   {
+                       "receivedAt":  "2026-03-05T19:54:39.692Z",
+                       "status":  "DELETED",
+                       "orderId":  44238095,
+                       "orderNumber":  null,
+                       "source":  "shipday",
+                       "payload":  {
+                                       "timestamp":  1772740478753,
+                                       "event":  "ORDER_DELETE",
+                                       "order_status":  "DELETED",
+                                       "company":  {
+                                                       "id":  148930,
+                                                       "name":  "Moisunce Delivery Company",
+                                                       "description":  "N/A",
+                                                       "address":  "Kuwait City, Kuwait",
+                                                       "principal_area_id":  148894,
+                                                       "order_acceptance_timeout":  120,
+                                                       "average_speed_mps":  8,
+                                                       "fixed_driver_fee":  0,
+                                                       "order_activation_time_mins":  90,
+                                                       "currency_code":  414,
+                                                       "schedule_order_lead_time_sec":  4500,
+                                                       "max_assigned_order":  3,
+                                                       "routing":  0,
+                                                       "country":  111,
+                                                       "admin_area":  "Al Ahmadi Governorate",
+                                                       "routing_cost":  "TRAVEL_TIME"
+                                                   },
+                                       "order_id":  44238095,
+                                       "pods":  [
+
+                                                ],
+                                       "signatures":  [
+
+                                                      ],
+                                       "delivery_note":  ""
+                                   }
+                   }
+               ],
+    "lastReceivedAt":  "2026-03-05T19:54:39.692Z",
+    "lastStatus":  "DELETED"
+}

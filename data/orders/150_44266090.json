@@ -1,0 +1,212 @@
+{
+  "orderId": "44266090",
+  "orderNumber": "150",
+  "eventCount": 3,
+  "events": [
+    {
+      "receivedAt": "2026-03-06T13:34:40.098Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44266090,
+      "orderNumber": "150",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772804078084,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44266090,
+          "order_number": "150",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 927,
+          "eta": "",
+          "driving_distance": 13143,
+          "placement_time": 1772804078000,
+          "expected_pickup_time": 1772805120000,
+          "expected_delivery_time": 1772807520000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61062794,
+          "name": "HESSA",
+          "phone": "+96560067709",
+          "address": "Block 1, Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Block 1, Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2806471,
+            "lng": 48.0493528
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBueXl4Z3g=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T13:35:23.489Z",
+      "status": "STARTED",
+      "orderId": 44266090,
+      "orderNumber": "150",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772804121384,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44266090,
+          "order_number": "150",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "payment_method": "CREDIT_CARD",
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 927,
+          "eta": "",
+          "driving_distance": 13143,
+          "placement_time": 1772804078000,
+          "expected_pickup_time": 1772805120000,
+          "expected_delivery_time": 1772807520000,
+          "assigned_time": 1772804098000,
+          "start_time": 1772804121000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61062794,
+          "name": "HESSA",
+          "phone": "+96560067709",
+          "address": "Block 1, Mubarak Al-Abdullah, Kuwait",
+          "formatted_address": "Block 1, Mubarak Al-Abdullah, Kuwait",
+          "location": {
+            "lat": 29.2806471,
+            "lng": 48.0493528
+          }
+        },
+        "pickup_details": {
+          "name": "Proper Sliders, Kuwait City, Kuwait",
+          "phone": "+965566 42559",
+          "address": "Proper Sliders, Shaab,",
+          "formatted_address": "Proper Sliders, Shaab,",
+          "location": {
+            "lat": 29.34818509999999,
+            "lng": 48.0310724
+          }
+        },
+        "carrier": {
+          "id": 495913,
+          "name": "osman 2 ",
+          "phone": "+96560026054",
+          "email": "mobamedosman3@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBueXl4Z3g=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T13:39:56.646Z",
+      "status": "DELETED",
+      "orderId": 44266090,
+      "orderNumber": null,
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772804394640,
+        "event": "ORDER_DELETE",
+        "order_status": "DELETED",
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "order_id": 44266090,
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-06T13:39:56.646Z",
+  "lastStatus": "DELETED"
+}

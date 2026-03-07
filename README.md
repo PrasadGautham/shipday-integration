@@ -18,6 +18,25 @@ Each received event is also saved per order in `data/orders/<orderId>.json`.
 
 - `GET /health`
   - No auth.
+- `GET /dashboard`
+  - Read-only web UI for orders by store (`pickup_details`) with delivery timing analytics.
+- `GET /api/dashboard/summary`
+  - Returns full dashboard dataset (`summary`, `stores`, `orders`).
+  - Optional query params: `from=YYYY-MM-DD`, `to=YYYY-MM-DD`.
+- `GET /api/dashboard/stores`
+  - Returns canonical store list with stable `storeId`.
+  - Optional query params: `from=YYYY-MM-DD`, `to=YYYY-MM-DD`.
+- `GET /api/dashboard/trends`
+  - Returns bucketed trend points.
+  - Query params:
+    - `granularity=daily|hourly`
+    - `storeId=<canonical-store-id>` optional
+    - `from=YYYY-MM-DD`, `to=YYYY-MM-DD` optional
+- `GET /api/dashboard/store-details`
+  - Returns summary and order list for one store.
+  - Query params:
+    - `storeId=<canonical-store-id>` required
+    - `from=YYYY-MM-DD`, `to=YYYY-MM-DD` optional
 
 ## Quick Start
 

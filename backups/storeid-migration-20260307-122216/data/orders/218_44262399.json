@@ -1,0 +1,267 @@
+{
+  "orderId": "44262399",
+  "orderNumber": "218",
+  "eventCount": 3,
+  "events": [
+    {
+      "receivedAt": "2026-03-06T17:31:10.676Z",
+      "status": "NOT_ASSIGNED",
+      "orderId": 44262399,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772793603445,
+        "event": "ORDER_INSERTED",
+        "order_status": "NOT_ASSIGNED",
+        "order": {
+          "id": 44262399,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 779,
+          "eta": "",
+          "driving_distance": 11989,
+          "placement_time": 1772793603000,
+          "expected_pickup_time": 1772794680000,
+          "expected_delivery_time": 1772795700000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61059167,
+          "name": "AISHA",
+          "phone": "+96599535132",
+          "address": "Al-Siddeeq, Kuwait",
+          "formatted_address": "Al-Siddeeq, Kuwait",
+          "location": {
+            "lat": 29.2937781,
+            "lng": 47.9935975
+          }
+        },
+        "pickup_details": {
+          "name": "KLC Ardiya",
+          "phone": "+965566 40972",
+          "address": "Ardiya, Kuwait",
+          "formatted_address": "Ardiya, Kuwait",
+          "location": {
+            "lat": 29.2888091,
+            "lng": 47.905861
+          }
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBueW5sZ2c=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T17:32:17.337Z",
+      "status": "STARTED",
+      "orderId": 44262399,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772793664358,
+        "event": "ORDER_ACCEPTED_AND_STARTED",
+        "order_status": "STARTED",
+        "order": {
+          "id": 44262399,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 779,
+          "eta": "",
+          "driving_distance": 11989,
+          "placement_time": 1772793603000,
+          "expected_pickup_time": 1772794680000,
+          "expected_delivery_time": 1772795700000,
+          "assigned_time": 1772793658000,
+          "start_time": 1772793664000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61059167,
+          "name": "AISHA",
+          "phone": "+96599535132",
+          "address": "Al-Siddeeq, Kuwait",
+          "formatted_address": "Al-Siddeeq, Kuwait",
+          "location": {
+            "lat": 29.2937781,
+            "lng": 47.9935975
+          }
+        },
+        "pickup_details": {
+          "name": "KLC Ardiya",
+          "phone": "+965566 40972",
+          "address": "Ardiya, Kuwait",
+          "formatted_address": "Ardiya, Kuwait",
+          "location": {
+            "lat": 29.2888091,
+            "lng": 47.905861
+          }
+        },
+        "carrier": {
+          "id": 489710,
+          "name": "navas ",
+          "phone": "+96550293460",
+          "email": "Misran20123@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBueW5sZ2c=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    },
+    {
+      "receivedAt": "2026-03-06T18:07:32.555Z",
+      "status": "READY_TO_DELIVER",
+      "orderId": 44262399,
+      "orderNumber": "218",
+      "source": "shipday",
+      "payload": {
+        "timestamp": 1772795473484,
+        "event": "ORDER_ONTHEWAY",
+        "order_status": "READY_TO_DELIVER",
+        "order": {
+          "id": 44262399,
+          "order_number": "218",
+          "provider": "",
+          "order_item": "[]",
+          "order_source": "SD_INT_3P",
+          "auto_assignment_status": "NOT_ASSIGNED",
+          "parent_id": -1,
+          "order_sequence_number": 0,
+          "total_cost": 0,
+          "delivery_fee": 1.25,
+          "predefined_tip": 0,
+          "cash_tip": 0,
+          "discount_amount": 0,
+          "tax": 0,
+          "podUrls": [],
+          "driving_duration": 779,
+          "eta": "",
+          "driving_distance": 11989,
+          "placement_time": 1772793603000,
+          "expected_pickup_time": 1772794680000,
+          "expected_delivery_time": 1772795700000,
+          "assigned_time": 1772793658000,
+          "start_time": 1772793664000,
+          "pickedup_time": 1772793670000,
+          "arrived_time": 1772795473000
+        },
+        "company": {
+          "id": 148930,
+          "name": "Moisunce Delivery Company",
+          "description": "N/A",
+          "address": "Kuwait City, Kuwait",
+          "principal_area_id": 148894,
+          "order_acceptance_timeout": 120,
+          "average_speed_mps": 8,
+          "fixed_driver_fee": 0,
+          "order_activation_time_mins": 90,
+          "currency_code": 414,
+          "schedule_order_lead_time_sec": 4500,
+          "max_assigned_order": 10,
+          "routing": 0,
+          "country": 111,
+          "admin_area": "Al Ahmadi Governorate",
+          "routing_cost": "TRAVEL_TIME"
+        },
+        "delivery_details": {
+          "id": 61059167,
+          "name": "AISHA",
+          "phone": "+96599535132",
+          "address": "Al-Siddeeq, Kuwait",
+          "formatted_address": "Al-Siddeeq, Kuwait",
+          "location": {
+            "lat": 29.2937781,
+            "lng": 47.9935975
+          }
+        },
+        "pickup_details": {
+          "name": "KLC Ardiya",
+          "phone": "+965566 40972",
+          "address": "Ardiya, Kuwait",
+          "formatted_address": "Ardiya, Kuwait",
+          "location": {
+            "lat": 29.2888091,
+            "lng": 47.905861
+          }
+        },
+        "carrier": {
+          "id": 489710,
+          "name": "navas ",
+          "phone": "+96550293460",
+          "email": "Misran20123@gmail.com",
+          "status": "ONLINE",
+          "current_order": -1,
+          "vehicle_description": ""
+        },
+        "trackingUrl": "https://www.ordertracking.io/d/en/MoisunceDeliveryCompany/cHBueW5sZ2c=",
+        "pods": [],
+        "signatures": [],
+        "delivery_note": ""
+      }
+    }
+  ],
+  "lastReceivedAt": "2026-03-06T18:07:32.555Z",
+  "lastStatus": "READY_TO_DELIVER"
+}
